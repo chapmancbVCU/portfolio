@@ -11,6 +11,27 @@
  *****************************************************************************/
 import _ from 'lodash';
 import './css/styles.css';
-import { Page } from './Page.js';
+import { HomeTab } from './HomeTab.js';
+import { ResumeTab } from './ResumeTab.js';
 
-page = new Page();
+
+/******************************************************************************
+ * INITIAL PAGE SETUP
+ *****************************************************************************/
+const homeTab = new HomeTab();
+const resumeTab = new ResumeTab();
+
+// Create query selectors for each tab.
+const homeTabSelector = document.querySelector('#home-tab');
+const resumeTabSelector = document.querySelector('#resume-tab');
+
+// Show home tab by default.
+const container = homeTab.getContentContainer();
+container.appendChild(homeTab.initializeHeader());
+container.appendChild(homeTab.initializeMain());
+container.appendChild(homeTab.initializeFooter());
+
+
+/******************************************************************************
+ * EVENT LISTENERS
+ *****************************************************************************/
