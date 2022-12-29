@@ -9,6 +9,11 @@
     padding: 0;
 }
 
+.header-image {
+    background: url('/src/images/mountain.png');
+    height: 115px;
+}
+
 .menu-list {
     text-align: center;
    justify-content: center;
