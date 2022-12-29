@@ -64,7 +64,7 @@ export class Page {
         const headerContainer = document.createElement('div');
         headerContainer.classList.add('header');
         const headerImage = document.createElement('div');
-        headerImage.textContent = 'Image';
+        headerImage.classList.add('header-image');
         headerContainer.appendChild(headerImage);
 
         const menuContainer = document.createElement('div');
