@@ -21,17 +21,30 @@ import { ResumeTab } from './ResumeTab.js';
 const homeTab = new HomeTab();
 const resumeTab = new ResumeTab();
 
-// Create query selectors for each tab.
-const homeTabSelector = document.querySelector('#home-tab');
-const resumeTabSelector = document.querySelector('#resume-tab');
-
 // Show home tab by default.
 const container = homeTab.getContentContainer();
 container.appendChild(homeTab.initializeHeader());
 container.appendChild(homeTab.initializeMain());
 container.appendChild(homeTab.initializeFooter());
 
+// Create query selectors for each tab.
+const homeTabSelector = document.querySelector('#home-tab');
+const resumeTabSelector = document.querySelector('#resume-tab');
+
 
 /******************************************************************************
  * EVENT LISTENERS
  *****************************************************************************/
+homeTabSelector.addEventListener('click', function() {
+    homeTab.eraseMainDomContent();
+    homeTab.eraseFooterDomContent();
+    container.appendChild(homeTab.initializeMain());
+    container.appendChild(homeTab.initializeFooter());
+});
+
+resumeTabSelector.addEventListener('click', function() {
+    resumeTab.eraseMainDomContent();
+    resumeTab.eraseFooterDomContent();
+    container.appendChild(resumeTab.initializeMain());
+    container.appendChild(resumeTab.initializeFooter());
+});
