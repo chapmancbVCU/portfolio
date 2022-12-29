@@ -12,7 +12,7 @@
 import { Page } from "./Page.js";
 
 /**
- * 
+ * Class whose functions renders components of the Contact Tab.
  */
 export class ContactTab extends Page {
     /**
@@ -22,6 +22,10 @@ export class ContactTab extends Page {
         super();
     }
 
+    /**
+     * Renders the main section of the webpage.
+     * @returns The HTMLDivElement that contains the main section.
+     */
     initializeMain() {
         const mainContainer = document.createElement('div');
         mainContainer.setAttribute('id', 'main');

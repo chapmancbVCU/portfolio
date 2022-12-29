@@ -6,7 +6,7 @@
  *               elements.
 ******************************************************************************/
 /**
- * 
+ * Contains functions for constructing each section of the webpage.
  */
 export class Page {
     /**
@@ -35,12 +35,17 @@ export class Page {
         elementToDelete.remove();
     }
 
+    /**
+     * The main content container div element.
+     * @returns The HTMLDivEmement for the main content container.
+     */
     getContentContainer() {
         return this.container;
     }
+
     /**
-     * 
-     * @returns 
+     * Renders the footer section of the webpage.
+     * @returns The HTMLDivElement that contains the footer section.
      */
     initializeFooter() {
         const footerContainer = document.createElement('div');
@@ -52,8 +57,8 @@ export class Page {
     }
 
     /**
-     * 
-     * @returns 
+     * Renders the header section of the webpage.
+     * @returns The HTMLDivElement that contains the header section.
      */
     initializeHeader() {
         const headerContainer = document.createElement('div');
@@ -102,9 +107,9 @@ export class Page {
         return headerContainer;
     }
 
-    /**
-     * 
-     * @returns 
+   /**
+     * Renders the main section of the webpage.
+     * @returns The HTMLDivElement that contains the main section.
      */
     initializeMain() {
         const mainContainer = document.createElement('div');
