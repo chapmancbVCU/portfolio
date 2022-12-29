@@ -14,9 +14,7 @@ export class Page {
      */
     constructor() {
         this.container = document.querySelector('#content');
-        this.container.appendChild(this.initializeHeader());
-        this.container.appendChild(this.initializeMain());
-        this.container.appendChild(this.initializeFooter());
+        
     }
 
     /**
@@ -37,6 +35,9 @@ export class Page {
         elementToDelete.remove();
     }
 
+    getContentContainer() {
+        return this.container;
+    }
     /**
      * 
      * @returns 
