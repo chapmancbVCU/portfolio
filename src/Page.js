@@ -19,8 +19,31 @@ export class Page {
         this.container.appendChild(this.initializeFooter());
     }
 
+    /**
+     * This method removes the footer from the DOM so that we can update the 
+     * contents of the page wen the user selects a tab.
+     */
+    eraseFooterDomContent() {
+        const footerElement = document.getElementById('footer');
+        footerElement.remove();
+    }
+    /**
+     * This method is called when the user selects a new tab.  It erases the 
+     * contents of the currently selected tab so that we ca render the 
+     * information for the newly selected tab.
+     */
+    eraseMainDomContent() {
+        const elementToDelete = document.getElementById('main');
+        elementToDelete.remove();
+    }
+
+    /**
+     * 
+     * @returns 
+     */
     initializeFooter() {
         const footerContainer = document.createElement('div');
+        footerContainer.setAttribute('id', 'footer');
         footerContainer.classList.add('footer')
         footerContainer.textContent = "Footer";
 
@@ -71,15 +94,20 @@ export class Page {
         contactTab.classList.add('page-tab');
         contactTab.textContent = 'Contact';
         menuList.appendChild(contactTab);
-        
+
         menuContainer.appendChild(menuList);
         headerContainer.appendChild(menuContainer);
 
         return headerContainer;
     }
 
+    /**
+     * 
+     * @returns 
+     */
     initializeMain() {
         const mainContainer = document.createElement('div');
+        mainContainer.setAttribute('id', 'main');
         mainContainer.classList.add('main');
         mainContainer.textContent = "Main";
 
