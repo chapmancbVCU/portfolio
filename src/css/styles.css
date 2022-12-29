@@ -4,3 +4,28 @@
   Date Created: December 28, 2022
    Description: CSS Stylesheet for professional portfolio.
 ******************************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list {
+    text-align: center;
+   justify-content: center;
+    list-style-type: none;
+    border: solid black 1px;
+
+    display: flex;
+    column-gap: 20px;
+}
+
+.page-tab {
+    border: solid black 1px;
+    width: 100px;
+    height: 30px;
+    padding-top: 13px;
+}
+
+@media only screen and (min-width: 700px) {
+
+}
