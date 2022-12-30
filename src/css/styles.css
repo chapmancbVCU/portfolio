@@ -9,14 +9,34 @@
     padding: 0;
 }
 
-.header-image {
+#content {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
     background: url('/src/images/mountain.png');
-    height: 115px;
+}
+
+.footer {
+    background-color: whitesmoke;
+    border: solid black 1px;
+}
+
+.header-image {
+    height: 100px;
+}
+
+.main {
+    background-color: whitesmoke;
+    border: solid black 1px;
 }
 
 .menu-list {
+    background-color: whitesmoke;
     text-align: center;
-   justify-content: center;
+    justify-content: center;
     list-style-type: none;
     border: solid black 1px;
 
