@@ -22,13 +22,29 @@
     margin-right: auto;
 }
 
+.content-container {
+    border: solid black 1px;
+    width: 90%;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 body {
     background: url('/src/images/mountain.png');
 }
 
 .footer {
-    background-color: whitesmoke;
+    background-color: burlywood;
     border: solid black 1px;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .header-image {
@@ -36,19 +52,18 @@ body {
 }
 
 .main {
-    background-color: whitesmoke;
+    background-color: burlywood;
     border: solid black 1px;
 }
 
 .menu-list {
-    background-color: whitesmoke;
+    background-color: burlywood;
     text-align: center;
     justify-content: center;
     list-style-type: none;
     border: solid black 1px;
 
     display: flex;
-    column-gap: 20px;
 }
 
 .page-tab {
@@ -60,5 +75,11 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
+    .content-container {
+        width: 700px;
+    }
 
+    .menu-list {
+        column-gap: 20px;
+    }
 }
