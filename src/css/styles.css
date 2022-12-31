@@ -11,9 +11,14 @@
     font-weight: normal;
     font-style: normal; 
 }
+
 * {
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --color1: rgb(250, 209, 154);
 }
 
 #content {
@@ -24,10 +29,12 @@
 
 .content-container {
     border: solid black 1px;
+    border-radius: 5px;
     width: 90%;
 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -41,7 +48,7 @@ body {
     border: solid black 1px;
 }
 
-h3 {
+.tab-title {
     margin-top: 15px;
     margin-bottom: 15px;
     text-align: center;
@@ -66,12 +73,74 @@ h3 {
     display: flex;
 }
 
+.name {
+    padding: 15px 10px 10px 10px;
+    text-align: left;
+}
+
 .page-tab {
+    background-color: var(--color1);
     font-family: "typewriter", sans-serif;
     border: solid black 1px;
     width: 100px;
     height: 30px;
     padding-top: 13px;
+}
+
+.paragraph-content {
+    margin: 10px;
+}
+
+.resume-border {
+    border-top: solid black 1px;
+    border-bottom: solid black 4px;
+    height: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.resume-heading {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.resume-heading:last-of-type {
+    margin-bottom: 2px;
+}
+
+.resume-job-title {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.resume-link {
+    margin-left: 20px;
+}
+
+.resume-section-border {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 25px;
+
+    border-top: solid black 2px;
+    border-right: solid black 1px;
+    border-bottom: solid black 1px;
+    border-left: solid black 1px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--color1);
+}
+
+.tab-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 @media only screen and (min-width: 700px) {
