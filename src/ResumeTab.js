@@ -139,7 +139,7 @@ export class ResumeTab extends Page {
         languagesAndLibraries.appendChild(langTitle);
         
         const languageList = document.createElement('p');
-        languageList.textContent = 'Java; JavaScript; HTML; CSS; PHP; FFmpeg';
+        languageList.textContent = 'Java; JavaScript; HTML; CSS; PHP; FFmpeg; C/C++; C#; Python; Perl; VHDL; Verilog HDL; Assembly: MIPS, 8051; Java OpenGL (JOGL); Windows Batch; PowerShell';
         languagesAndLibraries.appendChild(languageList);
         skillsList.appendChild(languagesAndLibraries);
 
