@@ -87,6 +87,10 @@ body {
     padding-top: 13px;
 }
 
+.page-tab:hover {
+    background-color: burlywood;
+}
+
 .paragraph-content {
     margin: 10px;
 }
@@ -125,6 +129,7 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 25px;
+    margin-bottom: 10px;
 
     border-top: solid black 2px;
     border-right: solid black 1px;
@@ -135,6 +140,21 @@ body {
     font-weight: bold;
     font-size: 18px;
     background-color: var(--color1);
+}
+
+.skill-category {
+    display: list-item;
+}
+
+.skills-list {
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.skills-list-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
 }
 
 .tab-title {

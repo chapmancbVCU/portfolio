@@ -93,6 +93,9 @@ export class ResumeTab extends Page {
         resumeContainer.appendChild(linkedInLinkContainer);
 
         resumeContainer.appendChild(this.renderSectionBorder('Summary of Technical Skills'));
+
+        resumeContainer.appendChild(this.renderSkillsList());
+
         return resumeContainer;
     }
 
@@ -122,5 +125,36 @@ export class ResumeTab extends Page {
         sectionBorder.classList.add('resume-section-border');
         sectionBorder.textContent = textContent;
         return sectionBorder;
+    }
+
+    renderSkillsList() {
+        const skillsList = document.createElement('ul');
+        skillsList.classList.add('skills-list');
+
+        const languagesAndLibraries = document.createElement('li');
+        languagesAndLibraries.classList.add('skills-list-item');
+        const langTitle = document.createElement('strong');
+        langTitle.classList.add('skill-category');
+        langTitle.textContent = 'Languages and Libraries:';
+        languagesAndLibraries.appendChild(langTitle);
+        
+        const languageList = document.createElement('p');
+        languageList.textContent = 'Java; JavaScript; HTML; CSS; PHP; FFmpeg';
+        languagesAndLibraries.appendChild(languageList);
+        skillsList.appendChild(languagesAndLibraries);
+
+        const envAndTools = document.createElement('li');
+        envAndTools.classList.add('skills-list-item');
+        const env = document.createElement('strong');
+        env.classList.add('skill-category');
+        env.textContent = 'Environments and Tools:';
+        envAndTools.appendChild(env);
+
+        const envList = document.createElement('p');
+        envList.textContent = 'Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack';
+        envAndTools.appendChild(envList);
+        skillsList.appendChild(envAndTools);
+
+        return skillsList;
     }
 }
