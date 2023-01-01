@@ -301,7 +301,7 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineEight);
 
         const lineNine = document.createElement('li');
-        lineEight.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
+        lineNine.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
         experienceList.appendChild(lineNine);
 
         professionalExperienceContainer.appendChild(experienceList);
