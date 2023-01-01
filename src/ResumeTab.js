@@ -120,6 +120,51 @@ export class ResumeTab extends Page {
         return welcomeContainer;
     }
 
+    renderEnvironmentsAndToolsList() {
+        const environmentAndToolsLi = document.createElement('li');
+        environmentAndToolsLi.classList.add('skills-list-item');
+        const environment = document.createElement('strong');
+        environment.classList.add('skill-category');
+        environment.textContent = 'Environments and Tools:';
+        environmentAndToolsLi.appendChild(environment);
+
+        const environmentList = document.createElement('p');
+        environmentList.textContent = 'Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack; Netbeans; ModelSim; Xilinx ISE; OrCAD Capture';
+        environmentAndToolsLi.appendChild(environmentList);
+
+        return environmentAndToolsLi
+    }
+
+    renderLanguagesAndLibrariesList() {
+        const languagesAndLibrariesLi = document.createElement('li');
+        languagesAndLibrariesLi.classList.add('skills-list-item');
+        const languageTitle = document.createElement('strong');
+        languageTitle.classList.add('skill-category');
+        languageTitle.textContent = 'Languages and Libraries:';
+        languagesAndLibrariesLi.appendChild(languageTitle);
+        
+        const languageList = document.createElement('p');
+        languageList.textContent = 'Java; JavaScript; HTML; CSS; PHP; FFmpeg; C/C++; C#; Python; Perl; VHDL; Verilog HDL; Assembly: MIPS, 8051; Java OpenGL (JOGL); Windows Batch; PowerShell';
+        languagesAndLibrariesLi.appendChild(languageList);
+
+        return languagesAndLibrariesLi;
+    }
+    
+    renderPlatformsList() {
+        const platformsLi = document.createElement('li');
+        platformsLi.classList.add('skills-list-item');
+        const platforms = document.createElement('strong');
+        platforms.classList.add('skill-category');
+        platforms.textContent = 'Platforms:';
+        platformsLi.appendChild(platforms);
+
+        const platformsList = document.createElement('p');
+        platformsList.textContent = 'Windows: 10, 11; Linux/Unix: Ubuntu, CentOS/RedHat/RHEL, MacOS';
+        platformsLi.appendChild(platformsList);
+
+        return platformsLi;
+    }
+
     renderSectionBorder(textContent) {
         const sectionBorder = document.createElement('div');
         sectionBorder.classList.add('resume-section-border');
@@ -131,29 +176,9 @@ export class ResumeTab extends Page {
         const skillsList = document.createElement('ul');
         skillsList.classList.add('skills-list');
 
-        const languagesAndLibraries = document.createElement('li');
-        languagesAndLibraries.classList.add('skills-list-item');
-        const langTitle = document.createElement('strong');
-        langTitle.classList.add('skill-category');
-        langTitle.textContent = 'Languages and Libraries:';
-        languagesAndLibraries.appendChild(langTitle);
-        
-        const languageList = document.createElement('p');
-        languageList.textContent = 'Java; JavaScript; HTML; CSS; PHP; FFmpeg; C/C++; C#; Python; Perl; VHDL; Verilog HDL; Assembly: MIPS, 8051; Java OpenGL (JOGL); Windows Batch; PowerShell';
-        languagesAndLibraries.appendChild(languageList);
-        skillsList.appendChild(languagesAndLibraries);
-
-        const envAndTools = document.createElement('li');
-        envAndTools.classList.add('skills-list-item');
-        const env = document.createElement('strong');
-        env.classList.add('skill-category');
-        env.textContent = 'Environments and Tools:';
-        envAndTools.appendChild(env);
-
-        const envList = document.createElement('p');
-        envList.textContent = 'Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack';
-        envAndTools.appendChild(envList);
-        skillsList.appendChild(envAndTools);
+        skillsList.appendChild(this.renderLanguagesAndLibrariesList());
+        skillsList.appendChild(this.renderEnvironmentsAndToolsList());        
+        skillsList.appendChild(this.renderPlatformsList());
 
         return skillsList;
     }
