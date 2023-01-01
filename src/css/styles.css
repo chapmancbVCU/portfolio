@@ -43,17 +43,26 @@ body {
     background: url('/src/images/mountain.png');
 }
 
+.experience-list {
+    margin-left: 13px;
+    margin-right: 10px;
+}
+
+.facility-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.facility-container-right {
+    margin-left: auto;
+    text-align: right;
+}
+
 .footer {
     background-color: burlywood;
     border: solid black 1px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-}
-
-.tab-title {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    text-align: center;
 }
 
 .header-image {
@@ -98,6 +107,11 @@ body {
 
 .paragraph-content {
     margin: 10px;
+}
+
+.professional-experience-container {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .resume-border {
@@ -174,6 +188,9 @@ body {
         width: 700px;
     }
 
+    .facility-container {
+        flex-direction: row;
+    }
     .menu-list {
         column-gap: 20px;
     }
