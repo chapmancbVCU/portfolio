@@ -55,7 +55,8 @@ body {
 
 .facility-container-right {
     margin-left: auto;
-    text-align: right;
+    text-align: left;
+    width: 100%;
 }
 
 .footer {
@@ -188,10 +189,21 @@ body {
         width: 700px;
     }
 
+    .menu-list {
+        column-gap: 20px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
     .facility-container {
         flex-direction: row;
     }
-    .menu-list {
-        column-gap: 20px;
+
+    .facility-container-left {
+        width: 50%;
+    }
+    .facility-container-right {
+        width: 50%;
+        text-align: right;
     }
 }

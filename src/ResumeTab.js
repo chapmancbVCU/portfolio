@@ -175,6 +175,7 @@ export class ResumeTab extends Page {
         facilityContainer.classList.add('facility-container');
     
         const left = document.createElement('div');
+        left.classList.add('facility-container-left');
         const boldTextContent = document.createElement('strong');
         boldTextContent.textContent = boldText;
         left.appendChild(boldTextContent);
