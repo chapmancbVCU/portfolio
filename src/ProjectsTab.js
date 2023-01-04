@@ -30,8 +30,30 @@ export class ProjectsTab extends Page {
         const mainContainer = document.createElement('div');
         mainContainer.setAttribute('id', 'main');
         mainContainer.classList.add('main');
-        mainContainer.textContent = "Main - Projects Tab";
 
+        const pagetitle = document.createElement('h3');
+        pagetitle.classList.add('tab-title');
+        pagetitle.textContent = "My Projects";
+        mainContainer.appendChild(pagetitle);
+
+        mainContainer.appendChild(this.initializeWelcomeContainer());
         return mainContainer;
+    }
+
+    /**
+     * Renders the welcome section of the resume tab.
+     * @returns HTMLDivElement The div that contains the welcome section of the 
+     * projects tab.
+     */
+    initializeWelcomeContainer() {
+        const welcomeContainer = document.createElement('div');
+        welcomeContainer.classList.add('content-container');
+
+        const welcomeMessage1 = document.createElement('p');
+        welcomeMessage1.classList.add('paragraph-content');
+        welcomeMessage1.textContent = "Below is a of projects I have completed in my leisure time and while completing my studies at VCU.  Here you will find a variety of pojects from websites to hardware designs.";
+        welcomeContainer.appendChild(welcomeMessage1);
+
+        return welcomeContainer;
     }
 }
