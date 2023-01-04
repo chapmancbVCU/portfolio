@@ -35,12 +35,25 @@
 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 15px;
     padding-left: 10px;
     padding-right: 10px;
 }
 
 body {
     background: url('/src/images/mountain.png');
+}
+
+.education-container, .professional-experience-container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.education-information {
+    margin-left: 25px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
 }
 
 .experience-list {
@@ -113,11 +126,6 @@ body {
     margin: 10px;
 }
 
-.professional-experience-container {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .resume-border {
     border-top: solid black 1px;
     border-bottom: solid black 4px;
@@ -171,7 +179,7 @@ body {
 }
 
 .skills-list {
-    margin-left: 25px;
+    margin-left: 27px;
     margin-right: 10px;
 }
 

@@ -71,7 +71,7 @@ export class ResumeTab extends Page {
         resumeContainer.appendChild(this.renderProfessionalExperience());
 
         resumeContainer.appendChild(this.renderSectionBorder('Education'));
-        
+        resumeContainer.appendChild(this.renderEducation());
         return resumeContainer;
     }
 
@@ -109,6 +109,39 @@ export class ResumeTab extends Page {
         return border;
     }
 
+    renderEducation() {
+        const educationContainer = document.createElement('div');
+        educationContainer.classList.add('education-container');
+
+        educationContainer.appendChild(this.renderFacilityContainer(
+                'Bachelor of Science in Computer Science',
+                'Virginia Commonwealth University',
+                'December 2010',
+                'Richmond, VA'));
+
+        const minorsDiv = document.createElement('div');
+        minorsDiv.classList.add('education-information');
+        const minorsLabel = document.createElement('em');
+        minorsLabel.textContent = 'Minors:';
+        minorsDiv.appendChild(minorsLabel);
+        const minors = document.createElement('p');
+        minors.textContent = 'Computer Engineering, Mathematical Sciences';
+        minorsDiv.appendChild(minors);
+        educationContainer.appendChild(minorsDiv);
+
+        const distinctionsDiv = document.createElement('div');
+        distinctionsDiv.classList.add('education-information');
+        const distinctionsLabel = document.createElement('em');
+        distinctionsLabel.textContent = "Distinctions:";
+        distinctionsDiv.appendChild(distinctionsLabel);
+        const distinctions = document.createElement('p');
+        distinctions.textContent = "Dean's List";
+        distinctionsDiv.appendChild(distinctions);
+        educationContainer.appendChild(distinctionsDiv);
+        
+        return educationContainer;
+    }
+    
     /**
      * Renders the E-mail.
      * @returns HTMLParagraphElement The resume E-mail.
@@ -170,7 +203,7 @@ export class ResumeTab extends Page {
         return jobTitle;
     }
 
-    renderFacilityContainer(boldText, regularText, location, years) {
+    renderFacilityContainer(boldText, regularText, topRight, bottomRight) {
         const facilityContainer = document.createElement('div');
         facilityContainer.classList.add('facility-container');
     
@@ -187,10 +220,10 @@ export class ResumeTab extends Page {
         const right = document.createElement('div');
         right.classList.add('facility-container-right');
         const locationContent = document.createElement('p');
-        locationContent.textContent = location;
+        locationContent.textContent = topRight;
         right.appendChild(locationContent);
         const yearsContent = document.createElement('p');
-        yearsContent.textContent = years;
+        yearsContent.textContent = bottomRight;
         right.appendChild(yearsContent);
         facilityContainer.appendChild(right);
         return facilityContainer;
