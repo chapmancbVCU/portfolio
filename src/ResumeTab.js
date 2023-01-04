@@ -72,6 +72,7 @@ export class ResumeTab extends Page {
 
         resumeContainer.appendChild(this.renderSectionBorder('Education'));
         resumeContainer.appendChild(this.renderEducation());
+
         return resumeContainer;
     }
 
@@ -109,6 +110,11 @@ export class ResumeTab extends Page {
         return border;
     }
 
+    /**
+     * Renders the the educational experience section of the resume.
+     * @returns HTMLDivElement A div element containing the educational 
+     * experience section of the resume.
+     */
     renderEducation() {
         const educationContainer = document.createElement('div');
         educationContainer.classList.add('education-container');
@@ -203,6 +209,15 @@ export class ResumeTab extends Page {
         return jobTitle;
     }
 
+    /**
+     * Renders information about a work or educational facility.
+     * @param {string} boldText Bold text on top left of div.
+     * @param {string} regularText Regular text on bottom left of div.
+     * @param {string} topRight Text that renders in top right corner.
+     * @param {string} bottomRight Text that renders in bottom left corner.
+     * @returns HTMLDivElement The div element that renders educational and 
+     * work information.
+     */
     renderFacilityContainer(boldText, regularText, topRight, bottomRight) {
         const facilityContainer = document.createElement('div');
         facilityContainer.classList.add('facility-container');
@@ -228,7 +243,12 @@ export class ResumeTab extends Page {
         facilityContainer.appendChild(right);
         return facilityContainer;
     }
-
+    
+    /**
+     * Renders the languages and libraries section.
+     * @returns HTMLDivElement The div element that contains information about 
+     * languages and libraries
+     */
     renderLanguagesAndLibrariesList() {
         const languagesAndLibrariesLi = document.createElement('li');
         languagesAndLibrariesLi.classList.add('skills-list-item');
@@ -244,6 +264,10 @@ export class ResumeTab extends Page {
         return languagesAndLibrariesLi;
     }
     
+    /**
+     * Renders the LinkedIn link.
+     * @returns HTMLDivElement The div element that contains LinkedIn profile.
+     */
     renderLinkedInLink() {
         const linkedInLinkContainer = document.createElement('div');
         linkedInLinkContainer.classList.add('resume-link');
@@ -256,6 +280,11 @@ export class ResumeTab extends Page {
         return linkedInLinkContainer;
     }
 
+    /**
+     * Renders the name for my resume.
+     * @returns HTMLDivElement The div element that contains the name of the 
+     * resume's author.
+     */
     renderName() {
         const name = document.createElement('h2');
         name.classList.add('name');
@@ -264,6 +293,11 @@ export class ResumeTab extends Page {
         return name;
     }
 
+    /**
+     * Renders the phone number for my resume.
+     * @returns HTMLDivElement The div element that contains the phone number 
+     * of the resume's author.
+     */
     renderPhoneNumber() {
         const phoneNumber = document.createElement('p');
         phoneNumber.classList.add('resume-heading');
@@ -272,6 +306,11 @@ export class ResumeTab extends Page {
         return phoneNumber;
     }
 
+    /**
+     * Renders the OS platforms section.
+     * @returns HTMLDivElement The div element that contains information about 
+     * OS platforms I am familar with.
+     */
     renderPlatformsList() {
         const platformsLi = document.createElement('li');
         platformsLi.classList.add('skills-list-item');
@@ -287,6 +326,11 @@ export class ResumeTab extends Page {
         return platformsLi;
     }
 
+    /**
+     * Renders the professional experience section.
+     * @returns HTMLDivElement The div element that contains bullet points 
+     * that describe my professional experience.
+     */
     renderProfessionalExperience() {
         const professionalExperienceContainer = document.createElement('div');
         professionalExperienceContainer.classList.add(
@@ -356,6 +400,11 @@ export class ResumeTab extends Page {
         return sectionBorder;
     }
 
+    /**
+     * Renders the skills list section.
+     * @returns HTMLDivElement The div element that contains information about 
+     * the skills I have acquired.
+     */
     renderSkillsList() {
         const skillsList = document.createElement('ul');
         skillsList.classList.add('skills-list');
