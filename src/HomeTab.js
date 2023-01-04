@@ -44,6 +44,11 @@ export class HomeTab extends Page {
         return mainContainer;
     }
 
+    /**
+     * Renders the welcome section of the resume tab.
+     * @returns HTMLDivElement The div that contains the welcome section of the 
+     * home tab.
+     */
     initializeWelcomeContainer() {
         const welcomeContainer = document.createElement('div');
         welcomeContainer.classList.add('content-container');
