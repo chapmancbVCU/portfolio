@@ -97,7 +97,17 @@ export class ProjectsTab extends Page {
 
         projectInfo.appendChild(projectInfoRight);
         projectContainer.appendChild(projectInfo);
-        
+
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.classList.add('buttons-container');
+        const code = document.createElement('button');
+        code.textContent = 'Code';
+        buttonsContainer.appendChild(code);
+        const live = document.createElement('button');
+        live.textContent = 'Live';
+        buttonsContainer.appendChild(live);
+        projectContainer.appendChild(buttonsContainer);
+
         return projectContainer;
     }
 }
