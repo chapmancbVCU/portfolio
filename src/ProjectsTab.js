@@ -42,7 +42,7 @@ export class ProjectsTab extends Page {
 
         let title = 'Research Seminar';
         let builtWith = 'CSS, HTML, and Microsoft Word';
-        let description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  This project is the website version of the paper.';
+        let description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  Topics include what is an Artificial Neural Network, why choose a hardware solution, and implementatiion pitfalls to avoid.  This project is the website version of the paper.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/ann-paper'`;
         let liveLink = `location.href='https://chapmancbvcu.github.io/ann-paper'`;
         mainContainer.appendChild(this.renderProject(
