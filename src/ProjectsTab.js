@@ -38,7 +38,14 @@ export class ProjectsTab extends Page {
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
-        mainContainer.appendChild(this.renderProject('test', 'test', 'test', CircuitImageAnn));
+        let title = 'Research Seminar';
+        let builtWith = 'CSS, HTML, and Microsoft Word';
+        let description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  This project is the website version of the paper.';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/ann-paper'`;
+        let liveLink = `location.href='https://chapmancbvcu.github.io/ann-paper'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            CircuitImageAnn, codeLink, liveLink));
         return mainContainer;
     }
 
@@ -59,7 +66,7 @@ export class ProjectsTab extends Page {
         return welcomeContainer;
     }
 
-    renderProject(title, builtWith, description, image) {
+    renderProject(title, builtWith, description, image, codeLink, liveLink) {
         const projectContainer = document.createElement('div');
         projectContainer.classList.add('content-container');
 
@@ -92,6 +99,7 @@ export class ProjectsTab extends Page {
         projectInfoRight.appendChild(builtWithContainer);
 
         const projectDescription = document.createElement('p');
+        projectDescription.classList.add('project-description');
         projectDescription.textContent = description;
         projectInfoRight.appendChild(projectDescription);
 
@@ -102,9 +110,11 @@ export class ProjectsTab extends Page {
         buttonsContainer.classList.add('buttons-container');
         const code = document.createElement('button');
         code.textContent = 'Code';
+        code.setAttribute('onclick', codeLink);
         buttonsContainer.appendChild(code);
         const live = document.createElement('button');
         live.textContent = 'Live';
+        live.setAttribute('onclick', liveLink);
         buttonsContainer.appendChild(live);
         projectContainer.appendChild(buttonsContainer);
 

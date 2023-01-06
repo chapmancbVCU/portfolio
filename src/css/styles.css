@@ -32,6 +32,29 @@ body {
     column-gap: 5px;
 }
 
+button {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #FFFFFF;
+    background-color: #5995DA;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #76AEED;
+}
+
+button:active {
+    background-color: #407FC7;
+}
+
+
 .buttons-container {
     display: flex;
     flex-direction: row;
@@ -149,16 +172,23 @@ body {
     margin: 10px;
 }
 
+.project-description {
+    margin-top: 10px;
+}
 .project-image {
-    width: 300px;
+    width: 90%;
     margin-top: 10px;
     margin-left: 15px;
 }
 
 .project-info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     column-gap: 15px;
+}
+
+.project-info-right {
+    margin: 15px;
 }
 
 .project-title {
@@ -246,6 +276,10 @@ body {
 }
 
 @media only screen and (min-width: 500px) {
+    .project-info {
+        flex-direction: row;
+    }
+    
     .facility-container {
         flex-direction: row;
     }
@@ -256,5 +290,11 @@ body {
     .facility-container-right {
         width: 50%;
         text-align: right;
+    }
+
+    .project-image {
+        width: 300px;
+        margin-top: 10px;
+        margin-left: 15px;
     }
 }
