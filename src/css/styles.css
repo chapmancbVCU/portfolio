@@ -32,6 +32,10 @@ body {
     column-gap: 5px;
 }
 
+.built-with-label {
+    min-width: 75px;
+}
+
 button {
     font-size: 16px;
     font-weight: bold;
@@ -175,6 +179,7 @@ body {
 .project-description {
     margin-top: 10px;
 }
+
 .project-image {
     width: 90%;
     margin-top: 10px;

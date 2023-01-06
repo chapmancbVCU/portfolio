@@ -11,6 +11,8 @@
  *****************************************************************************/
 import { Page } from "./Page.js";
 import CircuitImageAnn from "./images/circuits-ann.jpg";
+import ClockBoundaries from "./images/clock-boundaries.png";
+
 /**
  * Class whose functions renders components of the Projects Tab.
  */
@@ -46,6 +48,16 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             CircuitImageAnn, codeLink, liveLink));
+
+        title = 'Crossing Clock Boundaries';
+        builtWith = 'VHDL Hardware Description Language with ModelSim IDE';
+        description = 'An implementation of the procedure for sending data across hardware boundaries where each side of the boundary has a different clock speed.  In order to be successfull we need to implement a finite state machine with states regarding start, send, recieve, and acknowledgement of data being received.  The live link will take you to the writeup for this assignment.  Also, the image you see is the schematic I created to assist in the implementaiton of the design.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/EGRE-427-Crossing-Clock-Boundaries'`;
+        liveLink = `location.href='https://docs.google.com/viewer?url=https%3A%2F%2Fgithub.com%2FchapmancbVCU%2FEGRE-427-Crossing-Clock-Boundaries%2Fraw%2Fmain%2FEGRE%2520427%2520Homework%2520No%25204%2520writeup.docx'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            ClockBoundaries, codeLink, liveLink));
+        
         return mainContainer;
     }
 
@@ -90,6 +102,7 @@ export class ProjectsTab extends Page {
         builtWithContainer.classList.add('built-with-container');
 
         const builtWithLabel = document.createElement('strong');
+        builtWithLabel.classList.add('built-with-label');
         builtWithLabel.textContent = 'Built with:';
         builtWithContainer.appendChild(builtWithLabel);
 
