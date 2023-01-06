@@ -183,7 +183,8 @@ body {
 .project-image {
     width: 90%;
     margin-top: 10px;
-    margin-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-info {
@@ -280,6 +281,18 @@ body {
     }
 }
 
+@media only screen and (min-width: 550px) {
+    .project-image {
+        width: 300px;
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .project-info {
+        flex-direction: row;
+    }
+}
+
 @media only screen and (min-width: 500px) {
     .education-information {
         margin-left: 25px;
@@ -295,15 +308,5 @@ body {
     .facility-container-right {
         width: 50%;
         text-align: right;
-    }
-
-    .project-image {
-        width: 300px;
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-
-    .project-info {
-        flex-direction: row;
     }
 }
