@@ -12,6 +12,7 @@
 import { Page } from "./Page.js";
 import CircuitImageAnn from "./images/circuits-ann.jpg";
 import ClockBoundaries from "./images/clock-boundaries.png";
+import Collatz from "./images/3x+1.png";
 import CombinationLock from "./images/combination-lock.png";
 import LibraryImage from "./images/library-image.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
@@ -60,6 +61,15 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             LibraryImage, codeLink, liveLink));
+
+        title = 'Collatz Conjecture (3x+1 Problem)';
+        builtWith = 'Java with the Eclipse IDE';
+        description = 'This software is intended to demonstrate how the Collatz conjecture (3x+1) function is calculated.  It is defined as a function where in a case a seed is even, then you divide it by 2. If it is odd, you solve 3x+1, where x is the seed. This will repeat until you begin to observe 4, 2 and 1 being a repeated output.  This program has 2 ways of performing this in order to present performance information with respect to time. A non iterative version will simply report how much time has passed when a seed is set and the function performs calculations until it begins to repeat 4, 2, and 1. Hence, one pass of calculations is performed. Finally the time taken to reach 4, 2, 1, is reported in microseconds.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/Java-3x-plus-1-Problem-Collatz-conjecture'`;
+        liveLink = codeLink;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            Collatz, codeLink, liveLink));
 
         title = 'Research Seminar';
         builtWith = 'CSS, HTML, and Microsoft Word';
@@ -120,10 +130,15 @@ export class ProjectsTab extends Page {
         const projectInfo = document.createElement('div');
         projectInfo.classList.add('project-info');
 
+        const projectInfoLeft = document.createElement('div');
+        projectInfoLeft.classList.add('project-info-left');
+
         const projectImage = new Image();
         projectImage.classList.add('project-image');
         projectImage.src = image;
-        projectInfo.appendChild(projectImage);
+        projectInfoLeft.appendChild(projectImage);
+
+        projectInfo.appendChild(projectInfoLeft);
 
         const projectInfoRight = document.createElement('div');
         projectInfoRight.classList.add('project-info-right');
