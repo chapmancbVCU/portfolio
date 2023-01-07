@@ -52,6 +52,15 @@ export class ProjectsTab extends Page {
             title, builtWith, description, 
             RestaurantImage, codeLink, liveLink));
 
+        title = 'Library';
+        builtWith = 'HTML, CSS, and JavaScript';
+        description = 'This is project I have been working on that is an assignment for The Odin Project.  It is a work in progress and more work will be completed as I progress through the course.  The early goals is to enforce object oriented programming concepts and extra practice with forms.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/library'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/library/'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            LibraryImage, codeLink, liveLink));
+
         title = 'Research Seminar';
         builtWith = 'CSS, HTML, and Microsoft Word';
         description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  Topics include what is an Artificial Neural Network, why choose a hardware solution, and implementatiion pitfalls to avoid.  This project is the website version of the paper.';
