@@ -12,7 +12,9 @@
 import { Page } from "./Page.js";
 import CircuitImageAnn from "./images/circuits-ann.jpg";
 import ClockBoundaries from "./images/clock-boundaries.png";
-import RestaurantImage from './images/restaurant-image.jpg';
+import CombinationLock from "./images/combination-lock.png";
+import RestaurantImage from "./images/restaurant-image.jpg";
+
 /**
  * Class whose functions renders components of the Projects Tab.
  */
@@ -67,6 +69,15 @@ export class ProjectsTab extends Page {
             title, builtWith, description, 
             ClockBoundaries, codeLink, liveLink));
         
+
+        title = 'Electronic Combination Lock';
+        builtWith = 'VHDL Hardware Description Language with Xilinx ISE';
+        description = 'An implementation of an electronic combination lock.  After the code was written we synthesized the design to a Field Programmable Gate Array FPGA and demonstrated it to the graduate teaching assistant.  The design required the use of finite state machines to determine if the input is correct.  Depending on the input, a set of 4 LEDs will blink in a certain pattern to indicate if the entered combination is correct.  The live link will take you to the writeup for this assignment.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/EGRE-427-Electronic-Combination-Lock'`;
+        liveLink = `location.href='https://docs.google.com/viewer?url=https%3A%2F%2Fgithub.com%2FchapmancbVCU%2FEGRE-427-Electronic-Combination-Lock%2Fblob%2Fmain%2FLab%25202%2520Report.docx%3Fraw%3Dtrue'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            CombinationLock, codeLink, liveLink));
         return mainContainer;
     }
 
