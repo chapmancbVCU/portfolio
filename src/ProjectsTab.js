@@ -12,7 +12,7 @@
 import { Page } from "./Page.js";
 import CircuitImageAnn from "./images/circuits-ann.jpg";
 import ClockBoundaries from "./images/clock-boundaries.png";
-
+import RestaurantImage from './images/restaurant-image.jpg';
 /**
  * Class whose functions renders components of the Projects Tab.
  */
@@ -40,11 +40,20 @@ export class ProjectsTab extends Page {
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
-        let title = 'Research Seminar';
-        let builtWith = 'CSS, HTML, and Microsoft Word';
-        let description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  Topics include what is an Artificial Neural Network, why choose a hardware solution, and implementatiion pitfalls to avoid.  This project is the website version of the paper.';
-        let codeLink = `location.href='https://github.com/chapmancbVCU/ann-paper'`;
-        let liveLink = `location.href='https://chapmancbvcu.github.io/ann-paper'`;
+        let title = 'Restaurant Page';
+        let builtWith = 'HTML, CSS, JavaScript, and webpack';
+        let description = 'Webpage for a fictional restaurant where I developed skills around building websites with webpack.  What I most enjoyed about this project is learning how to build a website in a similar fashion to coding in other languages with Object Oriented Programming.';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/restaurant-page'`;
+        let liveLink = `location.href='https://chapmancbvcu.github.io/restaurant-page/dist/index.html'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            RestaurantImage, codeLink, liveLink));
+
+        title = 'Research Seminar';
+        builtWith = 'CSS, HTML, and Microsoft Word';
+        description = 'In this paper I discuss Artificial Neural Networks and how they can be implemented in hardware.  Topics include what is an Artificial Neural Network, why choose a hardware solution, and implementatiion pitfalls to avoid.  This project is the website version of the paper.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/ann-paper'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/ann-paper'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             CircuitImageAnn, codeLink, liveLink));
