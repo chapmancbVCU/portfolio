@@ -60,7 +60,7 @@ export class HomeTab extends Page {
 
         const welcomeMessage2 = document.createElement('p');
         welcomeMessage2.classList.add('paragraph-content');
-        welcomeMessage2.textContent = 'While not supporting research I assist in improving the ATOL’s infrastructure and services.  For example, we have spent a lot of effort improving our ability to distribute video throughout the lab over the past 3 years.  My major contribution is the design, implementation, and rollout of a video streaming appliance.  This appliance consists of a Nginx server compiled with the appropriate modules and a website front end so our team can interact with it.';
+        welcomeMessage2.textContent = 'While not supporting research I assist in improving the ATOL’s infrastructure and services.  For example, we have spent a lot of effort improving our ability to distribute video throughout the lab over the past 3 years.  My major contribution is the design, implementation, and rollout of a video streaming appliance.  This appliance consists of a Nginx server compiled with the appropriate modules and a website front end so our team can interact with it.  A database is used to store information about videos stored on the server so users can search for content and finally begin playback.';
         welcomeContainer.appendChild(welcomeMessage2);
 
         const welcomeMessage3 = document.createElement('p');
