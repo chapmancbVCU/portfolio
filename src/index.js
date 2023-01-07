@@ -10,7 +10,7 @@
  * IMPORTS
  *****************************************************************************/
 import _ from 'lodash';
-import { AboutTab } from './AboutTab.js';
+//import { AboutTab } from './AboutTab.js';
 import { ContactTab } from './ContactTab.js';
 import './css/styles.css';
 import { HomeTab } from './HomeTab.js';
@@ -24,7 +24,7 @@ import { ResumeTab } from './ResumeTab.js';
 const homeTab = new HomeTab();
 const resumeTab = new ResumeTab();
 const projectsTab = new ProjectsTab();
-const aboutTab = new AboutTab();
+//const aboutTab = new AboutTab();
 const contactTab = new ContactTab();
 
 // Show home tab by default.
