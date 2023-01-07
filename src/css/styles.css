@@ -192,6 +192,7 @@ body {
     display: flex;
     flex-direction: column;
     column-gap: 15px;
+    margin-top: 10px;
 }
 
 .project-info-right {
