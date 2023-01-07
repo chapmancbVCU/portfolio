@@ -16,6 +16,8 @@ import Collatz from "./images/3x+1.png";
 import CombinationLock from "./images/combination-lock.png";
 import LibraryImage from "./images/library-image.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
+import SignUpForm from "./images/signup-form.png";
+
 
 /**
  * Class whose functions renders components of the Projects Tab.
@@ -61,6 +63,15 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             LibraryImage, codeLink, liveLink));
+
+        title = 'Sign-Up Form';
+        builtWith = 'HTML, CSS, and JavaScript';
+        description = 'An assignment from The Odin Project when you create a Sign-Up Form for a ficticious event.  I immediately took concepts for improving form validation that I learned applied it on my professional projects for work.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/sign-up-form'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/sign-up-form/'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            SignUpForm, codeLink, liveLink));
 
         title = 'Collatz Conjecture (3x+1 Problem)';
         builtWith = 'Java with the Eclipse IDE';
