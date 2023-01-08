@@ -133,7 +133,7 @@ export class Page {
         facebook.href = 'https://www.facebook.com';
         const facebookIcon = document.createElement('i');
         facebookIcon.classList.add('fab');
-        facebookIcon.classList.add('fa-facebook-f');
+        facebookIcon.classList.add('fa-linkedin-in');
         facebook.appendChild(facebookIcon);
         socialContainer.appendChild(facebook);
 
@@ -142,7 +142,7 @@ export class Page {
         twitter.href = 'https://twitter.com';
         const twitterIcon = document.createElement('i');
         twitterIcon.classList.add('fab');
-        twitterIcon.classList.add('fa-twitter');
+        twitterIcon.classList.add('fa-github');
         twitter.appendChild(twitterIcon);
         socialContainer.appendChild(twitter);
 
@@ -150,19 +150,10 @@ export class Page {
         const instagram = document.createElement('a');
         instagram.href = 'https://instagram.com';
         const instagramIcon = document.createElement('i');
-        instagramIcon.classList.add('fab');
-        instagramIcon.classList.add('fa-instagram');
+        instagramIcon.classList.add('fa');
+        instagramIcon.classList.add('fa-envelope');
         instagram.appendChild(instagramIcon);
         socialContainer.appendChild(instagram);
-
-        // Setup Youtube link
-        const youTube = document.createElement('a');
-        youTube.href = 'https://www.youtube.com';
-        const youTubeIcon = document.createElement('i');
-        youTubeIcon.classList.add('fab');
-        youTubeIcon.classList.add('fa-youtube');
-        youTube.appendChild(youTubeIcon);
-        socialContainer.appendChild(youTube);
         
         return socialContainer;
     }

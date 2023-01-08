@@ -58,7 +58,6 @@ button:active {
     background-color: #407FC7;
 }
 
-
 .buttons-container {
     display: flex;
     flex-direction: row;
