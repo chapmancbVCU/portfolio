@@ -313,3 +313,7 @@ body {
         text-align: right;
     }
 }
+
+@media only screen and (max-device-width: 480px) {      
+    td#main_box { -webkit-text-size-adjust:100% }               
+}
