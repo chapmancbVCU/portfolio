@@ -52,6 +52,7 @@ export class ResumeTab extends Page {
 
         resumeContainer.appendChild(this.renderName());
         resumeContainer.appendChild(this.renderEmail());
+        resumeContainer.appendChild(this.renderPhoneNumber());
 
         resumeContainer.appendChild(this.renderBorder());
 
@@ -290,6 +291,19 @@ export class ResumeTab extends Page {
         name.textContent = 'Chad Chapman';
 
         return name;
+    }
+
+    /**
+     * Renders the phone number for my resume.
+     * @returns HTMLDivElement The div element that contains the phone number 
+     * of the resume's author.
+     */
+    renderPhoneNumber() {
+        const phoneNumber = document.createElement('p');
+        phoneNumber.classList.add('resume-heading');
+        phoneNumber.textContent = '804-426-0891';
+
+        return phoneNumber;
     }
 
     /**
