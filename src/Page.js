@@ -128,27 +128,27 @@ export class Page {
         const socialContainer = document.createElement('div');
         socialContainer.classList.add('social-icons');
 
-        // Setup Facebook link
+        // Setup LnkedIn link
         const facebook = document.createElement('a');
-        facebook.href = 'https://www.facebook.com';
+        facebook.href = 'https://www.linkedin.com/in/chadchapman2010/';
         const facebookIcon = document.createElement('i');
         facebookIcon.classList.add('fab');
         facebookIcon.classList.add('fa-linkedin-in');
         facebook.appendChild(facebookIcon);
         socialContainer.appendChild(facebook);
 
-        // Setup Twitter link
+        // Setup GitHub link
         const twitter = document.createElement('a');
-        twitter.href = 'https://twitter.com';
+        twitter.href = 'https://github.com/chapmancbVCU';
         const twitterIcon = document.createElement('i');
         twitterIcon.classList.add('fab');
         twitterIcon.classList.add('fa-github');
         twitter.appendChild(twitterIcon);
         socialContainer.appendChild(twitter);
 
-        // Setup Instagram link
+        // Setup E-mail link
         const instagram = document.createElement('a');
-        instagram.href = 'https://instagram.com';
+        instagram.href = 'mailto:cbchapman@alumni.vcu.edu';
         const instagramIcon = document.createElement('i');
         instagramIcon.classList.add('fa');
         instagramIcon.classList.add('fa-envelope');
