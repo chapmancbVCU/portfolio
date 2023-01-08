@@ -22,7 +22,7 @@
 }
 
 body {
-    font-size: 16px;
+    f-webkit-text-size-adjust: 100%;
 }
 
 .built-with-container {
@@ -322,8 +322,4 @@ body {
         width: 50%;
         text-align: right;
     }
-}
-
-@media only screen and (max-device-width: 480px) {      
-    td#main_box { -webkit-text-size-adjust:100% }               
 }
