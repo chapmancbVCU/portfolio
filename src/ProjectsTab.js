@@ -15,6 +15,7 @@ import ClockBoundaries from "./images/clock-boundaries.png";
 import Collatz from "./images/3x+1.png";
 import CombinationLock from "./images/combination-lock.png";
 import LibraryImage from "./images/library-image.jpg";
+import PortfolioImage from "./images/portfolio.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
 import SignUpForm from "./images/signup-form.png";
 
@@ -111,7 +112,13 @@ export class ProjectsTab extends Page {
             CombinationLock, codeLink, liveLink));
 
         title = 'Portfolio';
-        
+        builtWith = 'HTML, CSS, JavaScript, and webpack';
+        description = 'The professional portfolio page you are visiting right now.  Check out the source code if you want to.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/portfolio'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/portfolio/dist/index.html'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            PortfolioImage, codeLink, liveLink));
         return mainContainer;
     }
 
