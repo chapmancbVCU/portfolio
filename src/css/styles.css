@@ -150,6 +150,7 @@ body {
     border-top-right-radius: 5px;
 
     display: flex;
+    justify-content: space-evenly;
 }
 
 .name {
@@ -320,5 +321,9 @@ body {
     .facility-container-right {
         width: 50%;
         text-align: right;
+    }
+
+    .menu-list {
+        justify-content: center;
     }
 }
