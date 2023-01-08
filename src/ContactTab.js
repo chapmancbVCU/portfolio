@@ -30,8 +30,22 @@ export class ContactTab extends Page {
         const mainContainer = document.createElement('div');
         mainContainer.setAttribute('id', 'main');
         mainContainer.classList.add('main');
-        mainContainer.textContent = "Main - Contact Tab";
+        
+        const welcome = document.createElement('h3');
+        welcome.classList.add('tab-title');
+        welcome.textContent = "Contact Me For More Details";
+        mainContainer.appendChild(welcome);
+
+        mainContainer.appendChild(this.initializeWelcomeContainer());
 
         return mainContainer;
+    }
+
+    initializeWelcomeContainer() {
+        const welcomeContainer = document.createElement('div');
+        welcomeContainer.classList.add('content-container');
+
+        
+        return welcomeContainer;
     }
 }
