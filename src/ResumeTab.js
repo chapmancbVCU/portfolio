@@ -52,7 +52,7 @@ export class ResumeTab extends Page {
 
         resumeContainer.appendChild(this.renderName());
         resumeContainer.appendChild(this.renderEmail());
-        resumeContainer.appendChild(this.renderPhoneNumber());
+        //resumeContainer.appendChild(this.renderPhoneNumber());
 
         resumeContainer.appendChild(this.renderBorder());
 
