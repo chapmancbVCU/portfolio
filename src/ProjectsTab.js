@@ -109,6 +109,9 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             CombinationLock, codeLink, liveLink));
+
+        title = 'Portfolio';
+        
         return mainContainer;
     }
 

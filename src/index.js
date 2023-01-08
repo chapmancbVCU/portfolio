@@ -37,7 +37,7 @@ container.appendChild(homeTab.initializeFooter());
 const homeTabSelector = document.querySelector('#home-tab');
 const resumeTabSelector = document.querySelector('#resume-tab');
 const projectsTabSelector = document.querySelector('#projects-tab');
-//const aboutTabSelector = document.querySelector('#about-tab');
+const aboutTabSelector = document.querySelector('#about-tab');
 //const contactTabSelector = document.querySelector('#contact-tab');
 
 /******************************************************************************
@@ -64,12 +64,12 @@ projectsTabSelector.addEventListener('click', function() {
     container.appendChild(projectsTab.initializeFooter());
 });
 
-/*aboutTabSelector.addEventListener('click', function() {
+aboutTabSelector.addEventListener('click', function() {
     aboutTab.eraseMainDomContent();
     aboutTab.eraseFooterDomContent();
     container.appendChild(aboutTab.initializeMain());
     container.appendChild(aboutTab.initializeFooter());
-});*/
+});
 
 /*contactTabSelector.addEventListener('click', function() {
     contactTab.eraseMainDomContent();
