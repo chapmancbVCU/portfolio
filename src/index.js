@@ -25,7 +25,7 @@ const homeTab = new HomeTab();
 const resumeTab = new ResumeTab();
 const projectsTab = new ProjectsTab();
 //const aboutTab = new AboutTab();
-const contactTab = new ContactTab();
+//const contactTab = new ContactTab();
 
 // Show home tab by default.
 const container = homeTab.getContentContainer();
@@ -37,8 +37,8 @@ container.appendChild(homeTab.initializeFooter());
 const homeTabSelector = document.querySelector('#home-tab');
 const resumeTabSelector = document.querySelector('#resume-tab');
 const projectsTabSelector = document.querySelector('#projects-tab');
-const aboutTabSelector = document.querySelector('#about-tab');
-const contactTabSelector = document.querySelector('#contact-tab');
+//const aboutTabSelector = document.querySelector('#about-tab');
+//const contactTabSelector = document.querySelector('#contact-tab');
 
 /******************************************************************************
  * EVENT LISTENERS
@@ -71,9 +71,9 @@ projectsTabSelector.addEventListener('click', function() {
     container.appendChild(aboutTab.initializeFooter());
 });*/
 
-contactTabSelector.addEventListener('click', function() {
+/*contactTabSelector.addEventListener('click', function() {
     contactTab.eraseMainDomContent();
     contactTab.eraseFooterDomContent();
     container.appendChild(contactTab.initializeMain());
     container.appendChild(contactTab.initializeFooter());
-});
+});*/

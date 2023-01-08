@@ -267,6 +267,16 @@ body {
     column-gap: 10px;
 }
 
+.social-icons {
+    font-size: 1.5rem;
+  
+    display: flex;
+    column-gap: 35px;
+    justify-content: center;
+    
+    margin-top: 6px;
+}
+
 .tab-title {
     padding-top: 15px;
     margin-bottom: 15px;

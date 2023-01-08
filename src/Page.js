@@ -51,8 +51,8 @@ export class Page {
         const footerContainer = document.createElement('div');
         footerContainer.setAttribute('id', 'footer');
         footerContainer.classList.add('footer')
-        footerContainer.textContent = "Footer";
-
+        
+        footerContainer.appendChild(this.socialMedia());
         return footerContainer;
     }
 
@@ -95,11 +95,11 @@ export class Page {
         //aboutTab.textContent = "About";
         //menuList.appendChild(aboutTab);
 
-        const contactTab = document.createElement('li');
+        /*const contactTab = document.createElement('li');
         contactTab.setAttribute('id', 'contact-tab');
         contactTab.classList.add('page-tab');
         contactTab.textContent = 'Contact';
-        menuList.appendChild(contactTab);
+        menuList.appendChild(contactTab);*/
 
         menuContainer.appendChild(menuList);
         headerContainer.appendChild(menuContainer);
@@ -118,5 +118,52 @@ export class Page {
         mainContainer.textContent = "Main";
 
         return mainContainer;
+    }
+
+    /**
+     * This method creates the images and links for social media icons.
+     * @returns the HTMLDivElement object containing social icons.
+     */
+    socialMedia() {
+        const socialContainer = document.createElement('div');
+        socialContainer.classList.add('social-icons');
+
+        // Setup Facebook link
+        const facebook = document.createElement('a');
+        facebook.href = 'https://www.facebook.com';
+        const facebookIcon = document.createElement('i');
+        facebookIcon.classList.add('fab');
+        facebookIcon.classList.add('fa-facebook-f');
+        facebook.appendChild(facebookIcon);
+        socialContainer.appendChild(facebook);
+
+        // Setup Twitter link
+        const twitter = document.createElement('a');
+        twitter.href = 'https://twitter.com';
+        const twitterIcon = document.createElement('i');
+        twitterIcon.classList.add('fab');
+        twitterIcon.classList.add('fa-twitter');
+        twitter.appendChild(twitterIcon);
+        socialContainer.appendChild(twitter);
+
+        // Setup Instagram link
+        const instagram = document.createElement('a');
+        instagram.href = 'https://instagram.com';
+        const instagramIcon = document.createElement('i');
+        instagramIcon.classList.add('fab');
+        instagramIcon.classList.add('fa-instagram');
+        instagram.appendChild(instagramIcon);
+        socialContainer.appendChild(instagram);
+
+        // Setup Youtube link
+        const youTube = document.createElement('a');
+        youTube.href = 'https://www.youtube.com';
+        const youTubeIcon = document.createElement('i');
+        youTubeIcon.classList.add('fab');
+        youTubeIcon.classList.add('fa-youtube');
+        youTube.appendChild(youTubeIcon);
+        socialContainer.appendChild(youTube);
+        
+        return socialContainer;
     }
 }
