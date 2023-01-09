@@ -98,8 +98,11 @@ body {
     margin-right: 15px;
 }
 
+.education-container {
+    margin-bottom: 20px;
+}
+
 .education-information {
-    
     display: flex;
     flex-direction: row;
     column-gap: 5px;
