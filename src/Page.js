@@ -89,11 +89,11 @@ export class Page {
         projectsTab.textContent = 'Projects';
         menuList.appendChild(projectsTab);
 
-        const aboutTab = document.createElement('li');
+        /*const aboutTab = document.createElement('li');
         aboutTab.setAttribute('id', 'about-tab');
         aboutTab.classList.add('page-tab');
         aboutTab.textContent = "About";
-        menuList.appendChild(aboutTab);
+        menuList.appendChild(aboutTab);*/
 
         /*const contactTab = document.createElement('li');
         contactTab.setAttribute('id', 'contact-tab');
