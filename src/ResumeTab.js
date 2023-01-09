@@ -96,7 +96,7 @@ export class ResumeTab extends Page {
 
         const link = document.createElement('a');
         link.textContent = "here.";
-        link.href = "../src/docs/Chad_Chapman_Resume.docx";
+        link.href = "https://docs.google.com/viewer?url=https%3A%2F%2Fgithub.com%2FchapmancbVCU%2Fportfolio%2Fblob%2Fmain%2Fsrc%2Fdocs%2FChad_Chapman_Resume.docx%3Fraw%3Dtrue";
         link.setAttribute('download', '');
         welcomeMessage2.appendChild(link);
         welcomeContainer.appendChild(welcomeMessage2);
