@@ -92,7 +92,7 @@ export class ResumeTab extends Page {
 
         const welcomeMessage2 = document.createElement('p');
         welcomeMessage2.classList.add('paragraph-content');
-        welcomeMessage2.textContent = "A Web Developer specific resume can be found ";
+        welcomeMessage2.textContent = "A Web Developer specific resume for download and print can be found ";
 
         const link = document.createElement('a');
         link.textContent = "here.";
