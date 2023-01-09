@@ -374,12 +374,8 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineSeven);
 
         const lineEight = document.createElement('li');
-        lineEight.textContent = 'Ensured the secured delivery of experiment data to researchers and members of the development team following the CIA (Confidentiality, Integrity, Availability) of IT Security industry standard.';
+        lineEight.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
         experienceList.appendChild(lineEight);
-
-        const lineNine = document.createElement('li');
-        lineNine.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
-        experienceList.appendChild(lineNine);
 
         professionalExperienceContainer.appendChild(experienceList);
 
