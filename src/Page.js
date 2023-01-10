@@ -80,7 +80,7 @@ export class Page {
         const resumeTab = document.createElement('li');
         resumeTab.setAttribute('id', 'resume-tab');
         resumeTab.classList.add('page-tab');
-        resumeTab.textContent = 'Resume';
+        resumeTab.textContent = 'Career';
         menuList.appendChild(resumeTab);
 
         const projectsTab = document.createElement('li');
