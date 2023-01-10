@@ -42,8 +42,8 @@ export class ResumeTab extends Page {
         const careerHighlights = document.createElement('h3');
         careerHighlights.textContent = "Career Highlights at NASA";
         careerHighlights.classList.add('career-highlights');
-        mainContainer.appendChild(careerHighlights);
-        mainContainer.appendChild(this.initializeCareerHighlightsContainer());
+        //mainContainer.appendChild(careerHighlights);
+        //mainContainer.appendChild(this.initializeCareerHighlightsContainer());
 
         return mainContainer;
     }
