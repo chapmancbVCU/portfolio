@@ -61,13 +61,18 @@ export class HomeTab extends Page {
 
         const welcomeMessage3 = document.createElement('p');
         welcomeMessage3.classList.add('paragraph-content');
-        welcomeMessage3.textContent = 'After working on this project for some time I have developed an interest in web development.  I am thankful for a particular former manager at work who encouraged me to grow as a professional.  So, I decided to spend a good portion of my time outside of work to learn web development and apply what I have learned in the workplace.  Most of this skill development has been acquired through the utilization of free online resources such as freeCodeCamp and The Odin Project.  After over spending some time learning and applying acquired skills in a professional setting I have decided that full time web development could be a potential career move.  Please feel free to check out the rest of my portfolio website and projects.  If you have any questions don’t hesitate to ask.';
+        welcomeMessage3.textContent = 'After working on this project for some time I have developed an interest in web development.  I am thankful for a particular former manager at work who encouraged me to grow as a professional.  So, I decided to spend a good portion of my time outside of work to learn web development and apply what I have learned in the workplace.  Most of this skill development has been acquired through the utilization of free online resources such as freeCodeCamp and The Odin Project.';
         welcomeContainer.appendChild(welcomeMessage3);
 
         const welcomeMessage4 = document.createElement('p');
         welcomeMessage4.classList.add('paragraph-content');
-        welcomeMessage4.textContent = 'Links for contacting me and my GitHub profile can be found below.';
+        welcomeMessage4.textContent = 'After spending some time learning and applying acquired skills in a professional setting, I have decided that full time web development could be a potential career move.  Please feel free to check out the rest of my portfolio website and projects.  If you have any questions don’t hesitate to ask.';
         welcomeContainer.appendChild(welcomeMessage4);
+
+        const welcomeMessage5 = document.createElement('p');
+        welcomeMessage5.classList.add('paragraph-content');
+        welcomeMessage5.textContent = 'Links for contacting me and my GitHub profile can be found below.';
+        welcomeContainer.appendChild(welcomeMessage5);
         return welcomeContainer;
     }
 }
