@@ -67,7 +67,7 @@ export class ProjectsTab extends Page {
 
         title = 'Sign-Up Form';
         builtWith = 'HTML, CSS, and JavaScript';
-        description = 'An assignment from The Odin Project when you create a Sign-Up Form for a ficticious event.  I immediately took concepts for improving form validation that I learned and applied it on my professional projects for work.';
+        description = 'An assignment from The Odin Project where you create a Sign-Up Form for a ficticious event.  I immediately took concepts for improving form validation that I learned and applied it on my professional projects for work.';
         codeLink = `location.href='https://github.com/chapmancbVCU/sign-up-form'`;
         liveLink = `location.href='https://chapmancbvcu.github.io/sign-up-form/'`;
         mainContainer.appendChild(this.renderProject(
