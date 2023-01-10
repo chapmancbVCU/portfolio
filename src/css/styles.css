@@ -280,7 +280,7 @@ body {
     margin-top: 10px;
 }
 
-.tab-title {
+.tab-title, .career-highlights {
     padding-top: 15px;
     margin-bottom: 15px;
     text-align: center;
