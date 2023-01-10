@@ -40,11 +40,19 @@ export class ResumeTab extends Page {
         mainContainer.appendChild(this.initializeResumeContent());
 
         const careerHighlights = document.createElement('h3');
-        careerHighlights.textContent = "Awards and Achievements";
+        careerHighlights.textContent = "Career Highlights at NASA";
         careerHighlights.classList.add('career-highlights');
         mainContainer.appendChild(careerHighlights);
+        mainContainer.appendChild(this.initializeCareerHighlightsContainer());
 
         return mainContainer;
+    }
+
+    initializeCareerHighlightsContainer() {
+        const highlightsContainer = document.createElement('div');
+        highlightsContainer.classList.add('content-container');
+
+        return highlightsContainer;
     }
 
     /**
