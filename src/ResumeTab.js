@@ -43,7 +43,7 @@ export class ResumeTab extends Page {
         careerHighlights.textContent = "Career Highlights at NASA";
         careerHighlights.classList.add('career-highlights');
         mainContainer.appendChild(careerHighlights);
-        mainContainer.appendChild(this.initializeCareerHighlightsContainer());
+        mainContainer.appendChild(this.initializeCareerHighlightsSection());
 
         return mainContainer;
     }
@@ -52,29 +52,11 @@ export class ResumeTab extends Page {
      * Renders the career highlights section of the webpage.
      * @returns HTMLDivElement The div that contains the career highlights section.
      */
-    initializeCareerHighlightsContainer() {
-        const highlightsContainer = document.createElement('div');
-        highlightsContainer.classList.add('content-container');
-
-        const adminVisit = document.createElement('h3');
-        adminVisit.textContent = "NASA Administrator Visit";
-        adminVisit.classList.add('highlight-title');
-        highlightsContainer.appendChild(adminVisit);
-
-        const adminVistDescription = document.createElement('p');
-        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  News coverage of the visit can be viewed below.';
-        adminVistDescription.classList.add('paragraph-content');
-        highlightsContainer.appendChild(adminVistDescription);
-
-        const visitVideoContainer = document.createElement('div');
-        visitVideoContainer.classList.add('iframe-container');
-        const adminVisitVideo = document.createElement('iframe');
-        adminVisitVideo.setAttribute('src', 'https://www.youtube.com/embed/O1BzQEkTHlQ');
-        adminVisitVideo.setAttribute('allowfullscreen', '');
-        visitVideoContainer.appendChild(adminVisitVideo);
-        highlightsContainer.appendChild(visitVideoContainer);
-
-        return highlightsContainer;
+    initializeCareerHighlightsSection() {
+        const highlightsSection = document.createElement('div');
+        highlightsSection.appendChild(this.renderAdminVisit());
+        highlightsSection.appendChild(this.renderAssocAdminAward());
+        return highlightsSection;
     }
 
     /**
@@ -138,6 +120,43 @@ export class ResumeTab extends Page {
         return welcomeContainer;
     }
 
+    /**
+     * Renders the section for the NASA admin visit.
+     * @returns HTMLDivElement The div that contains information about the 
+     * NASA administrator visit.
+     */
+    renderAdminVisit() {
+        const adminVisitContainer = document.createElement('div');
+        adminVisitContainer.classList.add('content-container');
+        
+        const adminVisit = document.createElement('h3');
+        adminVisit.textContent = "NASA Administrator Visit";
+        adminVisit.classList.add('highlight-title');
+        adminVisitContainer.appendChild(adminVisit);
+
+        const adminVistDescription = document.createElement('p');
+        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  News coverage of the visit can be viewed below.';
+        adminVistDescription.classList.add('paragraph-content');
+        adminVisitContainer.appendChild(adminVistDescription);
+
+        const visitVideoContainer = document.createElement('div');
+        visitVideoContainer.classList.add('iframe-container');
+        const adminVisitVideo = document.createElement('iframe');
+        adminVisitVideo.setAttribute('src', 'https://www.youtube.com/embed/O1BzQEkTHlQ');
+        adminVisitVideo.setAttribute('allowfullscreen', '');
+        visitVideoContainer.appendChild(adminVisitVideo);
+        adminVisitContainer.appendChild(visitVideoContainer);
+
+        return adminVisitContainer;
+    }
+
+    renderAssocAdminAward() {
+        const assocAdminAwardContainer = document.createElement('div');
+        assocAdminAwardContainer.classList.add('content-container');
+
+        return assocAdminAwardContainer;
+    }
+    
     /**
      * Renders the border near the top of the resume.
      * @returns HTMLDivElement with border styling that acts as a border
