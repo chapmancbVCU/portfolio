@@ -42,8 +42,8 @@ export class ResumeTab extends Page {
         const careerHighlights = document.createElement('h3');
         careerHighlights.textContent = "Career Highlights at NASA";
         careerHighlights.classList.add('career-highlights');
-        //mainContainer.appendChild(careerHighlights);
-        //mainContainer.appendChild(this.initializeCareerHighlightsContainer());
+        mainContainer.appendChild(careerHighlights);
+        mainContainer.appendChild(this.initializeCareerHighlightsContainer());
 
         return mainContainer;
     }
@@ -55,6 +55,24 @@ export class ResumeTab extends Page {
     initializeCareerHighlightsContainer() {
         const highlightsContainer = document.createElement('div');
         highlightsContainer.classList.add('content-container');
+
+        const adminVisit = document.createElement('h3');
+        adminVisit.textContent = "NASA Administrator Visit";
+        adminVisit.classList.add('highlight-title');
+        highlightsContainer.appendChild(adminVisit);
+
+        const adminVistDescription = document.createElement('p');
+        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  News coverage of the visit can be viewed below.';
+        adminVistDescription.classList.add('paragraph-content');
+        highlightsContainer.appendChild(adminVistDescription);
+
+        const visitVideoContainer = document.createElement('div');
+        visitVideoContainer.classList.add('iframe-container');
+        const adminVisitVideo = document.createElement('iframe');
+        adminVisitVideo.setAttribute('src', 'https://www.youtube.com/embed/O1BzQEkTHlQ');
+        adminVisitVideo.setAttribute('allowfullscreen', '');
+        visitVideoContainer.appendChild(adminVisitVideo);
+        highlightsContainer.appendChild(visitVideoContainer);
 
         return highlightsContainer;
     }

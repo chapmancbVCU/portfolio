@@ -136,6 +136,26 @@ body {
     height: 100px;
 }
 
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 15px;
+}
+
+.iframe-container iframe {
+    margin: 10px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+}
+
 .main {
     background-color: burlywood;
     border-left: solid black 1px;
@@ -202,7 +222,7 @@ body {
     margin: 5px;
 }
 
-.project-title {
+.project-title, .highlight-title {
     margin-top: 10px;
     text-align: center; 
 }
