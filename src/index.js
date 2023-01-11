@@ -64,12 +64,12 @@ projectsTabSelector.addEventListener('click', function() {
     container.appendChild(projectsTab.initializeFooter());
 });
 
-aboutTabSelector.addEventListener('click', function() {
+/*aboutTabSelector.addEventListener('click', function() {
     aboutTab.eraseMainDomContent();
     aboutTab.eraseFooterDomContent();
     container.appendChild(aboutTab.initializeMain());
     container.appendChild(aboutTab.initializeFooter());
-});
+});*/
 
 /*contactTabSelector.addEventListener('click', function() {
     contactTab.eraseMainDomContent();

@@ -48,6 +48,10 @@ export class ResumeTab extends Page {
         return mainContainer;
     }
 
+    /**
+     * Renders the career highlights section of the webpage.
+     * @returns HTMLDivElement The div that contains the career highlights section.
+     */
     initializeCareerHighlightsContainer() {
         const highlightsContainer = document.createElement('div');
         highlightsContainer.classList.add('content-container');
