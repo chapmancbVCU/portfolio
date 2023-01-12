@@ -128,7 +128,7 @@ export class ResumeTab extends Page {
     renderAdminVisit() {
         const adminVisitContainer = document.createElement('div');
         adminVisitContainer.classList.add('content-container');
-        
+
         const adminVisit = document.createElement('h3');
         adminVisit.textContent = "NASA Administrator Visit";
         adminVisit.classList.add('highlight-title');
@@ -153,6 +153,26 @@ export class ResumeTab extends Page {
     renderAssocAdminAward() {
         const assocAdminAwardContainer = document.createElement('div');
         assocAdminAwardContainer.classList.add('content-container');
+
+        const title = document.createElement('h3');
+        title.textContent = '2021 Associate Administrator (AA) Awards';
+        title.classList.add('highlight-title');
+        assocAdminAwardContainer.appendChild(title);
+
+        const descriptionParagraph1 = document.createElement('p');
+        descriptionParagraph1.textContent = 'My contributions assisted our of researchers and fellow operations team members in being recognized by the NASA Associate Administrator.  A once in a career achievement, our efforts will revolutionize how drones are integrated into the National Airspace.  Our team’s contributions are the build out of a prototype command center where future Remote Operations for Autonomous Missions will occur.';
+        descriptionParagraph1.classList.add('paragraph-content');
+        assocAdminAwardContainer.appendChild(descriptionParagraph1);
+
+        const descriptionParagraph2 = document.createElement('p');
+        descriptionParagraph2.textContent = 'Want something delivered to your home from Starbucks via a drown?  What about drone operations involving law enforcement or fire departments?  We are trying to figure that out.  Our research will figure out the technical and human factors elements of such future operations.  A page containing more information can be found ';
+        descriptionParagraph2.classList.add('paragraph-content');
+
+        const link = document.createElement('a');
+        link.textContent = 'here.';
+        link.setAttribute('href', 'https://www.nasa.gov/aeroresearch/aa-awards/2021-tech-group-winners/');
+        descriptionParagraph2.appendChild(link);
+        assocAdminAwardContainer.appendChild(descriptionParagraph2);
 
         return assocAdminAwardContainer;
     }
