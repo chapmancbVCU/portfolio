@@ -67,7 +67,25 @@ export class ResumeTab extends Page {
         mainContainer.appendChild(this.initializeWelcomeContainer());
         mainContainer.appendChild(this.initializeResumeContent());
 
+        const careerHighlights = document.createElement('h3');
+        careerHighlights.textContent = "Career Highlights at NASA";
+        careerHighlights.classList.add('career-highlights');
+        mainContainer.appendChild(careerHighlights);
+        mainContainer.appendChild(this.initializeCareerHighlightsSection());
+
         return mainContainer;
+    }
+
+    /**
+     * Renders the career highlights section of the webpage.
+     * @returns HTMLDivElement The div that contains the career highlights section.
+     */
+    initializeCareerHighlightsSection() {
+        const highlightsSection = document.createElement('div');
+        highlightsSection.appendChild(this.renderAdminVisit());
+        highlightsSection.appendChild(this.renderAssociateAdminAward());
+        highlightsSection.appendChild(this.renderFailureDiscovery());
+        return highlightsSection;
     }
 
     /**
@@ -120,11 +138,79 @@ export class ResumeTab extends Page {
 
         const welcomeMessage2 = document.createElement('p');
         welcomeMessage2.classList.add('paragraph-content');
-        welcomeMessage2.textContent = "Reach out to me and I can provide a job tailored resume for you.";
+        welcomeMessage2.textContent = "A Web Developer specific resume for download and print can be found ";
+
+        const link = document.createElement('a');
+        link.textContent = "here.";
+        link.href = "https://docs.google.com/viewer?url=https%3A%2F%2Fgithub.com%2FchapmancbVCU%2Fportfolio%2Fblob%2Fmain%2Fsrc%2Fdocs%2FChad_Chapman_Resume.docx%3Fraw%3Dtrue";
+        welcomeMessage2.appendChild(link);
         welcomeContainer.appendChild(welcomeMessage2);
         
         return welcomeContainer;
     }
+
+    /**
+     * Renders the section for the NASA Administrator visit.
+     * @returns HTMLDivElement The div that contains information about the 
+     * NASA Administrator visit.
+     */
+    renderAdminVisit() {
+        const adminVisitContainer = document.createElement('div');
+        adminVisitContainer.classList.add('content-container');
+
+        const adminVisit = document.createElement('h3');
+        adminVisit.textContent = "NASA Administrator Visit";
+        adminVisit.classList.add('highlight-title');
+        adminVisitContainer.appendChild(adminVisit);
+
+        const adminVistDescription = document.createElement('p');
+        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  He also held a news conference in our facility in front of our video wall.  News coverage of the visit can be viewed below.';
+        adminVistDescription.classList.add('paragraph-content');
+        adminVisitContainer.appendChild(adminVistDescription);
+
+        const visitVideoContainer = document.createElement('div');
+        visitVideoContainer.classList.add('iframe-container');
+        const adminVisitVideo = document.createElement('iframe');
+        adminVisitVideo.setAttribute('src', 'https://www.youtube.com/embed/O1BzQEkTHlQ');
+        adminVisitVideo.setAttribute('allowfullscreen', '');
+        visitVideoContainer.appendChild(adminVisitVideo);
+        adminVisitContainer.appendChild(visitVideoContainer);
+
+        return adminVisitContainer;
+    }
+
+    /**
+     * Renders the section for the NASA Associate Administrator award.
+     * @returns HTMLDivElement The div that contains information about the 
+     * NASA Associate Administrator award.
+     */
+    renderAssociateAdminAward() {
+        const associateAdminAwardContainer = document.createElement('div');
+        associateAdminAwardContainer.classList.add('content-container');
+
+        const title = document.createElement('h3');
+        title.textContent = '2021 Associate Administrator (AA) Awards';
+        title.classList.add('highlight-title');
+        associateAdminAwardContainer.appendChild(title);
+
+        const descriptionParagraph1 = document.createElement('p');
+        descriptionParagraph1.textContent = 'My contributions assisted our of researchers and fellow operations team members in being recognized by the NASA Associate Administrator.  A once in a career achievement, our efforts will revolutionize how drones are integrated into the National Airspace.  Our team’s contributions are the build out of a prototype command center where future Remote Operations for Autonomous Missions will occur.';
+        descriptionParagraph1.classList.add('paragraph-content');
+        associateAdminAwardContainer.appendChild(descriptionParagraph1);
+
+        const descriptionParagraph2 = document.createElement('p');
+        descriptionParagraph2.textContent = 'Want something delivered to your home from Starbucks via a drown?  What about drone operations involving law enforcement or fire departments?  We are trying to figure that out.  Our research will figure out the technical and human factors elements of such future operations.  A page containing more information can be found ';
+        descriptionParagraph2.classList.add('paragraph-content');
+
+        const link = document.createElement('a');
+        link.textContent = 'here.';
+        link.setAttribute('href', 'https://www.nasa.gov/aeroresearch/aa-awards/2021-tech-group-winners/');
+        descriptionParagraph2.appendChild(link);
+        associateAdminAwardContainer.appendChild(descriptionParagraph2);
+
+        return associateAdminAwardContainer;
+    }
+    
 
     /**
      * Renders the border near the top of the resume.
@@ -202,10 +288,34 @@ export class ResumeTab extends Page {
         environmentAndToolsLi.appendChild(environment);
 
         const environmentList = document.createElement('p');
-        environmentList.textContent = 'Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack; Netbeans; ModelSim; Xilinx ISE; OrCAD Capture';
+        environmentList.textContent = 'Git; Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack; Netbeans; ModelSim; Xilinx ISE; OrCAD Capture';
         environmentAndToolsLi.appendChild(environmentList);
 
         return environmentAndToolsLi
+    }
+
+    /**
+     * Renders the section for event where I performed testing and discovered 
+     * a major failure before guests arrived.
+     * @returns HTMLDivElement The div that contains information about how 
+     * I discovered a failure that got resolved before high profile guests 
+     * arrived for a demonstration.
+     */
+    renderFailureDiscovery() {
+        const failureDiscoveryContainer = document.createElement('div');
+        failureDiscoveryContainer.classList.add('content-container');
+        
+        const title = document.createElement('h3');
+        title.textContent = 'Big Save Before High Profile Demonstration';
+        title.classList.add('highlight-title');
+        failureDiscoveryContainer.appendChild(title);
+
+        const descriptionParagraph = document.createElement('p');
+        descriptionParagraph.textContent = 'Received recognition from my company for discovering a major failure before a demonstration that was presented to some airline industry executives.  Although another team member tested our capabilities in the morning before the demonstration I took the initiative to perform another test 1 1/2 hours before guests were to arrive.  I discovered a failure on a key component of our simulation.  A spare was put in place and tested before our guests arrived. ';
+        descriptionParagraph.classList.add('paragraph-content');
+        failureDiscoveryContainer.appendChild(descriptionParagraph);
+
+        return failureDiscoveryContainer;
     }
 
     /**
@@ -402,12 +512,8 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineSeven);
 
         const lineEight = document.createElement('li');
-        lineEight.textContent = 'Ensured the secured delivery of experiment data to researchers and members of the development team following the CIA (Confidentiality, Integrity, Availability) of IT Security industry standard.';
+        lineEight.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
         experienceList.appendChild(lineEight);
-
-        const lineNine = document.createElement('li');
-        lineNine.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
-        experienceList.appendChild(lineNine);
 
         professionalExperienceContainer.appendChild(experienceList);
 
@@ -459,7 +565,7 @@ export class ResumeTab extends Page {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Sat Jan 07 2023 15:42:04 GMT-0500 (Eastern Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.0</a> on Wed Jan 11 2023 20:30:16 GMT-0500 (Eastern Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>
