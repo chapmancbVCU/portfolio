@@ -283,7 +283,7 @@ export class ResumeTab extends Page {
         failureDiscoveryContainer.appendChild(title);
 
         const descriptionParagraph = document.createElement('p');
-        descriptionParagraph.textContent = 'Received recognition from my company for discovering a major failure before a demonstration that was presented some airline industry executives.  Although another team member tested our capabilities in the morning before the demonstration I took the initiative to perform another test 1 1/2 hours before guests were to arrive.  I discovered a failure on a key component and a spare was put in place and tested just in time. ';
+        descriptionParagraph.textContent = 'Received recognition from my company for discovering a major failure before a demonstration that was presented to some airline industry executives.  Although another team member tested our capabilities in the morning before the demonstration I took the initiative to perform another test 1 1/2 hours before guests were to arrive.  I discovered a failure on a key component of our simulation.  A spare was put in place and tested before our guests arrived. ';
         descriptionParagraph.classList.add('paragraph-content');
         failureDiscoveryContainer.appendChild(descriptionParagraph);
 
