@@ -55,7 +55,7 @@ export class ResumeTab extends Page {
     initializeCareerHighlightsSection() {
         const highlightsSection = document.createElement('div');
         highlightsSection.appendChild(this.renderAdminVisit());
-        highlightsSection.appendChild(this.renderAssocAdminAward());
+        highlightsSection.appendChild(this.renderAssociateAdminAward());
         return highlightsSection;
     }
 
@@ -155,19 +155,19 @@ export class ResumeTab extends Page {
      * @returns HTMLDivElement The div that contains information about the 
      * NASA Associate Administrator award.
      */
-    renderAssocAdminAward() {
-        const assocAdminAwardContainer = document.createElement('div');
-        assocAdminAwardContainer.classList.add('content-container');
+    renderAssociateAdminAward() {
+        const associateAdminAwardContainer = document.createElement('div');
+        associateAdminAwardContainer.classList.add('content-container');
 
         const title = document.createElement('h3');
         title.textContent = '2021 Associate Administrator (AA) Awards';
         title.classList.add('highlight-title');
-        assocAdminAwardContainer.appendChild(title);
+        associateAdminAwardContainer.appendChild(title);
 
         const descriptionParagraph1 = document.createElement('p');
         descriptionParagraph1.textContent = 'My contributions assisted our of researchers and fellow operations team members in being recognized by the NASA Associate Administrator.  A once in a career achievement, our efforts will revolutionize how drones are integrated into the National Airspace.  Our team’s contributions are the build out of a prototype command center where future Remote Operations for Autonomous Missions will occur.';
         descriptionParagraph1.classList.add('paragraph-content');
-        assocAdminAwardContainer.appendChild(descriptionParagraph1);
+        associateAdminAwardContainer.appendChild(descriptionParagraph1);
 
         const descriptionParagraph2 = document.createElement('p');
         descriptionParagraph2.textContent = 'Want something delivered to your home from Starbucks via a drown?  What about drone operations involving law enforcement or fire departments?  We are trying to figure that out.  Our research will figure out the technical and human factors elements of such future operations.  A page containing more information can be found ';
@@ -177,9 +177,9 @@ export class ResumeTab extends Page {
         link.textContent = 'here.';
         link.setAttribute('href', 'https://www.nasa.gov/aeroresearch/aa-awards/2021-tech-group-winners/');
         descriptionParagraph2.appendChild(link);
-        assocAdminAwardContainer.appendChild(descriptionParagraph2);
+        associateAdminAwardContainer.appendChild(descriptionParagraph2);
 
-        return assocAdminAwardContainer;
+        return associateAdminAwardContainer;
     }
     
     /**
