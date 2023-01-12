@@ -121,9 +121,9 @@ export class ResumeTab extends Page {
     }
 
     /**
-     * Renders the section for the NASA admin visit.
+     * Renders the section for the NASA Administrator visit.
      * @returns HTMLDivElement The div that contains information about the 
-     * NASA administrator visit.
+     * NASA Administrator visit.
      */
     renderAdminVisit() {
         const adminVisitContainer = document.createElement('div');
@@ -135,7 +135,7 @@ export class ResumeTab extends Page {
         adminVisitContainer.appendChild(adminVisit);
 
         const adminVistDescription = document.createElement('p');
-        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  News coverage of the visit can be viewed below.';
+        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  He also held a news conference in our facility in front of our video wall.  News coverage of the visit can be viewed below.';
         adminVistDescription.classList.add('paragraph-content');
         adminVisitContainer.appendChild(adminVistDescription);
 
@@ -150,6 +150,11 @@ export class ResumeTab extends Page {
         return adminVisitContainer;
     }
 
+    /**
+     * Renders the section for the NASA Associate Administrator award.
+     * @returns HTMLDivElement The div that contains information about the 
+     * NASA Associate Administrator award.
+     */
     renderAssocAdminAward() {
         const assocAdminAwardContainer = document.createElement('div');
         assocAdminAwardContainer.classList.add('content-container');
