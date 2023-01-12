@@ -56,6 +56,7 @@ export class ResumeTab extends Page {
         const highlightsSection = document.createElement('div');
         highlightsSection.appendChild(this.renderAdminVisit());
         highlightsSection.appendChild(this.renderAssociateAdminAward());
+        highlightsSection.appendChild(this.renderFailureDiscovery());
         return highlightsSection;
     }
 
@@ -182,6 +183,7 @@ export class ResumeTab extends Page {
         return associateAdminAwardContainer;
     }
     
+
     /**
      * Renders the border near the top of the resume.
      * @returns HTMLDivElement with border styling that acts as a border
@@ -262,6 +264,30 @@ export class ResumeTab extends Page {
         environmentAndToolsLi.appendChild(environmentList);
 
         return environmentAndToolsLi
+    }
+
+    /**
+     * Renders the section for event where I performed testing and discovered 
+     * a major failure before guests arrived.
+     * @returns HTMLDivElement The div that contains information about how 
+     * I discovered a failure that got resolved before high profile guests 
+     * arrived for a demonstration.
+     */
+    renderFailureDiscovery() {
+        const failureDiscoveryContainer = document.createElement('div');
+        failureDiscoveryContainer.classList.add('content-container');
+        
+        const title = document.createElement('h3');
+        title.textContent = 'Big Save Before High Profile Demonstration';
+        title.classList.add('highlight-title');
+        failureDiscoveryContainer.appendChild(title);
+
+        const descriptionParagraph = document.createElement('p');
+        descriptionParagraph.textContent = 'Received recognition from my company for discovering a major failure before a demonstration that was presented some airline industry executives.  Although another team member tested our capabilities in the morning before the demonstration I took the initiative to perform another test 1 1/2 hours before guests were to arrive.  I discovered a failure on a key component and a spare was put in place and tested just in time. ';
+        descriptionParagraph.classList.add('paragraph-content');
+        failureDiscoveryContainer.appendChild(descriptionParagraph);
+
+        return failureDiscoveryContainer;
     }
 
     /**
