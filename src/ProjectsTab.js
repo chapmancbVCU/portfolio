@@ -18,6 +18,7 @@ import LibraryImage from "./images/library-image.jpg";
 import PortfolioImage from "./images/portfolio.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
 import SignUpForm from "./images/signup-form.png";
+import TodoListImage from "./images/todo-list-image.jpg";
 
 
 /**
@@ -47,11 +48,20 @@ export class ProjectsTab extends Page {
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
-        let title = 'Restaurant Page';
+        let title = 'Todo List App';
         let builtWith = 'HTML, CSS, JavaScript, and webpack';
-        let description = 'Webpage for a fictional restaurant where I developed skills around building websites with webpack.  What I most enjoyed about this project is learning how to build a website in a similar fashion to coding in other languages with Object Oriented Programming.';
-        let codeLink = `location.href='https://github.com/chapmancbVCU/restaurant-page'`;
-        let liveLink = `location.href='https://chapmancbvcu.github.io/restaurant-page/dist/index.html'`;
+        let description = 'This is my current project.  It is an implementation of the Todo List App.  It supports all CRUD (Create, Read, Update, and Delete) operations by utilizing local storage of your web browser.  Follow me in real time as I complete this project.';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/todo-list'`;
+        let liveLink = `location.href='https://chapmancbvcu.github.io/todo-list/dist/index.html'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            TodoListImage, codeLink, liveLink));
+
+        title = 'Restaurant Page';
+        builtWith = 'HTML, CSS, JavaScript, and webpack';
+        description = 'Webpage for a fictional restaurant where I developed skills around building websites with webpack.  What I most enjoyed about this project is learning how to build a website in a similar fashion to coding in other languages with Object Oriented Programming.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/restaurant-page'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/restaurant-page/dist/index.html'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             RestaurantImage, codeLink, liveLink));
