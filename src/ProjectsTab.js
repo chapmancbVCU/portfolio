@@ -19,7 +19,7 @@ import PortfolioImage from "./images/portfolio.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
 import SignUpForm from "./images/signup-form.png";
 import TodoListImage from "./images/todo-list-image.jpg";
-
+import Weather from "./images/weather.jpg";
 
 /**
  * Class whose functions renders components of the Projects Tab.
@@ -48,11 +48,20 @@ export class ProjectsTab extends Page {
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
-        let title = 'Todo List App';
+        let title = 'Weather App';
         let builtWith = 'HTML, CSS, JavaScript, and webpack';
-        let description = 'This is my current project.  It is an implementation of the Todo List App.  It supports all CRUD (Create, Read, Update, and Delete) operations by utilizing local storage of your web browser.  Follow me in real time as I complete this project.';
-        let codeLink = `location.href='https://github.com/chapmancbVCU/todo-list'`;
-        let liveLink = `location.href='https://chapmancbvcu.github.io/todo-list/dist/index.html'`;
+        let description = 'This is my implementation of the weather app.  This is the project that I am currently working on.  You can follow me in realtime as I complete this project';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/weather-app'`;
+        let liveLink = `location.href='https://chapmancbvcu.github.io/weather-app/dist/index.html'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            Weather, codeLink, liveLink));
+
+        title = 'Todo List App';
+        builtWith = 'HTML, CSS, JavaScript, and webpack';
+        description = 'This is my implementation of the Todo List App.  It supports all CRUD (Create, Read, Update, and Delete) operations by utilizing local storage of your web browser.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/todo-list'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/todo-list/dist/index.html'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             TodoListImage, codeLink, liveLink));
