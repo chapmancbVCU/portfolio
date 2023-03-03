@@ -48,6 +48,7 @@ export class ProjectsTab extends Page {
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
+        // Current project
         let title = 'Weather App';
         let builtWith = 'HTML, CSS, JavaScript, and webpack';
         let description = 'This is my implementation of the weather app.  This is the project that I am currently working on.  You can follow me in realtime as I complete this project';
