@@ -16,6 +16,7 @@ import Collatz from "./images/3x+1.png";
 import CombinationLock from "./images/combination-lock.png";
 import LibraryImage from "./images/library-image.jpg";
 import PortfolioImage from "./images/portfolio.jpg";
+import Recursion from "./images/recursion.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
 import SignUpForm from "./images/signup-form.png";
 import TodoListImage from "./images/todo-list-image.jpg";
@@ -49,11 +50,20 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
         // Current project
-        let title = 'Weather App';
-        let builtWith = 'HTML, CSS, JavaScript, and webpack';
-        let description = 'This is my implementation of the weather app.  This is the project that I am currently working on.  You can follow me in realtime as I complete this project';
-        let codeLink = `location.href='https://github.com/chapmancbVCU/weather-app'`;
-        let liveLink = `location.href='https://chapmancbvcu.github.io/weather-app/dist/index.html'`;
+        let title = 'Merge Sort';
+        let builtWith = 'HTML, CSS, JavaScript, TypeScript, Jest, Webpack, Babel';
+        let description = 'The implementation of the Merge Sort Algorithm.  Linked List is used as the data structure.  For this project we created our own implementation of the Linked List along with functions needed to modify the list.  Test driven development was use to test functions that modify the linked list.';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
+        let liveLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            Recursion, codeLink, liveLink));
+
+        title = 'Weather App';
+        builtWith = 'HTML, CSS, JavaScript, and webpack';
+        description = 'For this project we use an api key from Open Weather Map to populate the content of this webpage.  This webpage supports the ability to search for weather and change the units displayed.  Upon initial loading of the page location detection is used to show your local forecast.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/weather-app'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/weather-app/dist/index.html'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             Weather, codeLink, liveLink));
