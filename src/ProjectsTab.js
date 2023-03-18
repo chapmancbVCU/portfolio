@@ -52,7 +52,7 @@ export class ProjectsTab extends Page {
         // Current project
         let title = 'Merge Sort';
         let builtWith = 'HTML, CSS, JavaScript, TypeScript, Jest, Webpack, Babel';
-        let description = 'The implementation of the Merge Sort Algorithm.  Linked List is used as the data structure.  For this project we created our own implementation of the Linked List along with functions needed to modify the list.  Test driven development was use to test functions that modify the linked list.';
+        let description = 'This project showcases the implementation of the Merge Sort Algorithm. The data structure of choice for this project is the Linked List, for which we created a custom implementation and necessary functions for list modification. In order to ensure the functionality and reliability of the linked list functions, we utilized a test-driven development approach. With this project, you can explore how the Merge Sort Algorithm can be used with a Linked List data structure, while also gaining insights into test-driven development best practices.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
         let liveLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
         mainContainer.appendChild(this.renderProject(
@@ -61,7 +61,7 @@ export class ProjectsTab extends Page {
 
         title = 'Weather App';
         builtWith = 'HTML, CSS, JavaScript, and webpack';
-        description = 'For this project we use an api key from Open Weather Map to populate the content of this webpage.  This webpage supports the ability to search for weather and change the units displayed.  Upon initial loading of the page location detection is used to show your local forecast.';
+        description = 'In this project, we utilized a combination of web development technologies such as HTML, CSS, JavaScript, and webpack. Our objective was to create a dynamic webpage that displays weather information using an API key from Open Weather Map.  The webpage includes a search feature that enables users to look up weather information for various locations and change the units of measurement displayed. Additionally, we integrated location detection functionality to automatically display the forecast for a user\'s current location when the page is initially loaded.  By leveraging these technologies, we have created a responsive and user-friendly webpage that enables users to easily access and view accurate weather information for any location of their choice.';
         codeLink = `location.href='https://github.com/chapmancbVCU/weather-app'`;
         liveLink = `location.href='https://chapmancbvcu.github.io/weather-app/dist/index.html'`;
         mainContainer.appendChild(this.renderProject(
@@ -70,7 +70,7 @@ export class ProjectsTab extends Page {
 
         title = 'Todo List App';
         builtWith = 'HTML, CSS, JavaScript, and webpack';
-        description = 'This is my implementation of the Todo List App.  It supports all CRUD (Create, Read, Update, and Delete) operations by utilizing local storage of your web browser.';
+        description = 'This is my implementation of a robust Todo List App, built using HTML, CSS, JavaScript, and webpack. Our goal was to create a user-friendly and responsive application that supports all CRUD (Create, Read, Update, and Delete) operations for managing tasks.  To ensure a seamless user experience, we utilized local storage of the user\'s web browser, which allows users to save their tasks between browser sessions.  The Todo List App is intuitive and easy to use, with a simple and clean user interface that allows users to quickly add, edit, delete, and mark their tasks as complete. Additionally, the application is designed to be responsive, ensuring that it is accessible and functional across a range of devices and screen sizes.';
         codeLink = `location.href='https://github.com/chapmancbVCU/todo-list'`;
         liveLink = `location.href='https://chapmancbvcu.github.io/todo-list/dist/index.html'`;
         mainContainer.appendChild(this.renderProject(

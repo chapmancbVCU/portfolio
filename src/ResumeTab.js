@@ -136,7 +136,7 @@ export class ResumeTab extends Page {
         adminVisitContainer.appendChild(adminVisit);
 
         const adminVistDescription = document.createElement('p');
-        adminVistDescription.textContent = 'Within my first year working at NASA I had the pleasure to support a high profile demonstration for the NASA Administrator Charles Bolden.  He also held a news conference in our facility in front of our video wall.  News coverage of the visit can be viewed below.';
+        adminVistDescription.textContent = 'During my first year working at NASA, I had the honor of being involved in a high-profile demonstration that was held for none other than the esteemed NASA Administrator Charles Bolden. The event was held in our facility, where we had the privilege of showcasing our cutting-edge technology and expertise. As part of the demonstration, Mr. Bolden held a news conference, which was covered by various media outlets. I am thrilled to have been a part of this exciting opportunity and am proud to have contributed to the success of the event. Please feel free to view the news coverage of this remarkable visit below.';
         adminVistDescription.classList.add('paragraph-content');
         adminVisitContainer.appendChild(adminVistDescription);
 
@@ -166,12 +166,12 @@ export class ResumeTab extends Page {
         associateAdminAwardContainer.appendChild(title);
 
         const descriptionParagraph1 = document.createElement('p');
-        descriptionParagraph1.textContent = 'My contributions assisted our of researchers and fellow operations team members in being recognized by the NASA Associate Administrator.  A once in a career achievement, our efforts will revolutionize how drones are integrated into the National Airspace.  Our team’s contributions are the build out of a prototype command center where future Remote Operations for Autonomous Missions will occur.';
+        descriptionParagraph1.textContent = 'I am proud to have played a role in the ground-breaking work that led to our team being recognized by the NASA Associate Administrator. This was a once-in-a-lifetime achievement, as our efforts will revolutionize the integration of drones into the National Airspace. Specifically, we worked on building a prototype command center, which will serve as the hub for future remote operations involving autonomous missions.';
         descriptionParagraph1.classList.add('paragraph-content');
         associateAdminAwardContainer.appendChild(descriptionParagraph1);
 
         const descriptionParagraph2 = document.createElement('p');
-        descriptionParagraph2.textContent = 'Want something delivered to your home from Starbucks via a drown?  What about drone operations involving law enforcement or fire departments?  We are trying to figure that out.  Our research will figure out the technical and human factors elements of such future operations.  A page containing more information can be found ';
+        descriptionParagraph2.textContent = 'Our team\'s research is focused on tackling some of the key technical and human factors involved in drone operations. We are exploring the possibilities of using drones for delivery services, as well as for law enforcement and fire department operations. Our findings will pave the way for the safe and effective use of drones in these and other contexts.  A page containing more information can be found ';
         descriptionParagraph2.classList.add('paragraph-content');
 
         const link = document.createElement('a');
@@ -282,11 +282,15 @@ export class ResumeTab extends Page {
         title.classList.add('highlight-title');
         failureDiscoveryContainer.appendChild(title);
 
-        const descriptionParagraph = document.createElement('p');
-        descriptionParagraph.textContent = 'Received recognition from my company for discovering a major failure before a demonstration that was presented to some airline industry executives.  Although another team member tested our capabilities in the morning before the demonstration I took the initiative to perform another test 1 1/2 hours before guests were to arrive.  I discovered a failure on a key component of our simulation.  A spare was put in place and tested before our guests arrived. ';
-        descriptionParagraph.classList.add('paragraph-content');
-        failureDiscoveryContainer.appendChild(descriptionParagraph);
+        const descriptionParagraph1 = document.createElement('p');
+        descriptionParagraph1.textContent = 'Early in my career I recieved recognition from my company for my quick thinking and initiative in discovering a major failure just before a crucial demonstration that was to be presented to a group of airline industry executives. While another team member had already tested our capabilities on the morning of the demonstration, I took it upon myself to perform one final test just 90 minutes before the guests were due to arrive.';
+        descriptionParagraph1.classList.add('paragraph-content');
+        failureDiscoveryContainer.appendChild(descriptionParagraph1);
 
+        const descriptionParagraph2 = document.createElement('p');
+        descriptionParagraph2.textContent = 'This extra test proved to be crucial, as I discovered a failure in a key component of our simulation. Thanks to quick thinking form our System Administrators, we were able to replace the faulty component with a spare and test it thoroughly before the guests arrived. This meant that our demonstration went off without a hitch, and we were able to impress the airline executives with our cutting-edge technology and attention to detail. I am honored to have been recognized by my company for my contributions to this demonstration for hour high-profile guests.';
+        descriptionParagraph2.classList.add('paragraph-content');
+        failureDiscoveryContainer.appendChild(descriptionParagraph2);
         return failureDiscoveryContainer;
     }
 
