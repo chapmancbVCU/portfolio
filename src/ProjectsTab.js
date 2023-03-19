@@ -51,7 +51,7 @@ export class ProjectsTab extends Page {
 
         // Current project
         let title = 'Merge Sort';
-        let builtWith = 'HTML, CSS, JavaScript, TypeScript, Jest, Webpack, Babel';
+        let builtWith = 'Node.JS, JavaScript, TypeScript, Jest, Webpack';
         let description = 'This project showcases the implementation of the Merge Sort Algorithm. The data structure of choice for this project is the Linked List, for which we created a custom implementation and necessary functions for list modification. In order to ensure the functionality and reliability of the linked list functions, we utilized a test-driven development approach. With this project, you can explore how the Merge Sort Algorithm can be used with a Linked List data structure, while also gaining insights into test-driven development best practices.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
         let liveLink = `location.href='https://github.com/chapmancbVCU/merge-sort'`;
