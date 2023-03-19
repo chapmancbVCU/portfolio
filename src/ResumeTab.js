@@ -260,7 +260,7 @@ export class ResumeTab extends Page {
         environmentAndToolsLi.appendChild(environment);
 
         const environmentList = document.createElement('p');
-        environmentList.textContent = 'Git; GitHub; Node.JS; Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack; Netbeans; ModelSim; Xilinx ISE; OrCAD Capture';
+        environmentList.textContent = 'Git; GitHub; Node.JS; Jest; Eclipse; Visual Studio 2022; Visual Studio Code; Ansible; Atlassian: Confluence, Jira, BitBucket; MySQL MariaDB; phpMyAdmin; Nginx Web Server; webpack; Netbeans; ModelSim; Xilinx ISE; OrCAD Capture';
         environmentAndToolsLi.appendChild(environmentList);
 
         return environmentAndToolsLi
