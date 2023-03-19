@@ -163,7 +163,7 @@ export class ProjectsTab extends Page {
 
         const welcomeMessage1 = document.createElement('p');
         welcomeMessage1.classList.add('paragraph-content');
-        welcomeMessage1.textContent = "Below is a collection of projects I have completed in my leisure time and while completing my studies at VCU.  Here you will find a variety of pojects from websites to hardware designs.";
+        welcomeMessage1.textContent = "Below is a collection of projects I have completed in my leisure time and while completing my studies at VCU.  Here you will find a variety of projects from websites to hardware designs.";
         welcomeContainer.appendChild(welcomeMessage1);
 
         return welcomeContainer;
