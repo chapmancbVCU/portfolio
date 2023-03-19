@@ -460,15 +460,15 @@ export class ResumeTab extends Page {
         experienceList.classList.add('experience-list');
 
         const lineOne = document.createElement('li');
-        lineOne.textContent = 'Provided simulation services for our civil servant customers at NASA Langley Research Center in the role of a Systems Engineer for the Air Traffic Operations Laboratory (ATOL).';
+        lineOne.textContent = 'Provide simulation services for NASA Langley Research Center\'s Air Traffic Operations Laboratory (ATOL) as a Systems Engineer.';
         experienceList.appendChild(lineOne);
 
         const lineTwo = document.createElement('li');
-        lineTwo.textContent = 'Reduced our customer’s operational costs by designing and deploying a video streaming solution using a Nginx server that supports live streaming and Video on Demand (VOD) services.';
+        lineTwo.textContent = 'Reduce customer\'s operational costs by designing and deploying video streaming solution using Nginx server that supports live streaming and Video on Demand (VOD) services.';
         experienceList.appendChild(lineTwo);
         
         const lineThree = document.createElement('li');
-        lineThree.textContent = 'Developed the website front end for the video streaming solution which references a database that stores searchable records of videos available to the VOD service.';
+        lineThree.textContent = '•	Develop website front end for video streaming solution that references database storing searchable records of videos available to VOD service.';
         experienceList.appendChild(lineThree);
 
         const lineFour = document.createElement('li');
@@ -480,17 +480,20 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineFive);
 
         const lineSix = document.createElement('li');
-        lineSix.textContent = 'Automated the deployment of several generations of our configuration baseline with Ansible to hardware assets in our customer’s test and verification laboratory and production environments';
+        lineSix.textContent = 'Automate deployment of several generations of configuration baseline with Ansible to hardware assets in customer\'s test and verification laboratory and production environments, reducing deployment time by 75%.';
         experienceList.appendChild(lineSix);
 
         const lineSeven = document.createElement('li');
-        lineSeven.textContent = 'Implemented a Python script that reports statistics of error rates from large datasets.';
+        lineSeven.textContent = 'Implement Python script that reports statistics of error rates from large datasets, assisting the customer in determining the scope of a simulation timing issue.';
         experienceList.appendChild(lineSeven);
 
         const lineEight = document.createElement('li');
-        lineEight.textContent = 'Developed a maintenance tool in Java that generates a report of outdated simulation software builds on systems throughout the production environment.';
+        lineEight.textContent = 'Develop maintenance tool in Java that generates report of outdated simulation software builds on systems throughout production environment.';
         experienceList.appendChild(lineEight);
 
+        const lineNine = document.createElement('li');
+        lineNine.textContent = 'Ensure secure delivery of experiment data to researchers and development team following CIA IT Security industry standard.';
+        experienceList.appendChild(lineNine);
         professionalExperienceContainer.appendChild(experienceList);
 
         return professionalExperienceContainer;
