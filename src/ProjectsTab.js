@@ -52,7 +52,7 @@ export class ProjectsTab extends Page {
 
         // Current project
         let title = 'CV Application';
-        let builtWith = 'ReactJS, JavaScript, TypeScript, Jest, Webpack';
+        let builtWith = 'ReactJS, JavaScript, TypeScript, Jest, Webpack, HTML, CSS';
         let description = 'This is the current project that I am working on beginning on March 26, 2023.  Follow me as I make daily updates to this CV Application webpage.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/cv-application/tree/main'`;
         let liveLink = `location.href='https://chapmancbvcu.github.io/cv-application/'`;
