@@ -53,7 +53,7 @@ export class ProjectsTab extends Page {
         // Current project
         let title = 'CV Application';
         let builtWith = 'ReactJS, JavaScript, TypeScript, Jest, Webpack, HTML, CSS';
-        let description = 'This is the current project that I am working on beginning on March 26, 2023.  Follow me as I make daily updates to this CV Application webpage.';
+        let description = 'A simple CV Application form that uses ReactJS states and hooks to share data between form inputs and sample output.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/cv-application/tree/main'`;
         let liveLink = `location.href='https://chapmancbvcu.github.io/cv-application/'`;
         mainContainer.appendChild(this.renderProject(
