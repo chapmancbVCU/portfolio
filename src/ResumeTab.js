@@ -81,7 +81,7 @@ export class ResumeTab extends Page {
         resumeContainer.appendChild(this.renderSectionBorder(
             'Summary of Technical Skills'));
 
-        resumeContainer.appendChild(this.renderSkillsList());
+        resumeContainer.appendChild(this.renderTechnicalSkillsSummaryList());
 
         resumeContainer.appendChild(this.renderSectionBorder(
             'Professional Experience'));
@@ -466,40 +466,48 @@ export class ResumeTab extends Page {
         experienceList.classList.add('experience-list');
 
         const lineOne = document.createElement('li');
-        lineOne.textContent = 'Provide simulation services for NASA Langley Research Center\'s Air Traffic Operations Laboratory (ATOL) as a Systems Engineer.';
+        lineOne.textContent = 'Provided simulation services for NASA Langley Research Center\'s Air Traffic Operations Laboratory (ATOL) as a Systems Engineer across multiple contracts and two employers.';
         experienceList.appendChild(lineOne);
 
         const lineTwo = document.createElement('li');
-        lineTwo.textContent = 'Reduce customer\'s operational costs by designing and deploying video streaming solution using Nginx server that supports live streaming and Video on Demand (VOD) services.';
+        lineTwo.textContent = 'Created a comprehensive video streaming solution, encompassing a Linux-based Nginx server for live streaming and Video on Demand (VOD) services, alongside the development of the corresponding website front end integrated with a searchable video database.';
         experienceList.appendChild(lineTwo);
         
         const lineThree = document.createElement('li');
-        lineThree.textContent = 'Develop website front end for video streaming solution that references database storing searchable records of videos available to VOD service.';
+        lineThree.textContent = 'Streamlined the recording and live streaming of experiment asset displays with Open Broadcast Software (OBS) through the implementation of efficient scripting solutions.';
         experienceList.appendChild(lineThree);
 
         const lineFour = document.createElement('li');
-        lineFour.textContent = 'Created a user guide for how to operate the services provided by the Nginx server.';
+        lineFour.textContent = 'Developed a dashboard that reports information about active live streams.';
         experienceList.appendChild(lineFour);
 
         const lineFive = document.createElement('li');
-        lineFive.textContent = 'Collaborated with our System Administrators to perform upgrades and conduct testing of the ATOL facility’s video distribution system.';
+        lineFive.textContent = 'Created a user guide for how to operate the services provided by the Nginx server.';
         experienceList.appendChild(lineFive);
 
         const lineSix = document.createElement('li');
-        lineSix.textContent = 'Automate deployment of several generations of configuration baseline with Ansible to hardware assets in customer\'s test and verification laboratory and production environments, reducing deployment time by 75%.';
+        lineSix.textContent = 'Collaborated with our System Administrators to perform upgrades and conduct testing of the ATOL facility’s video distribution system.';
         experienceList.appendChild(lineSix);
 
         const lineSeven = document.createElement('li');
-        lineSeven.textContent = 'Implement Python script that reports statistics of error rates from large datasets, assisting the customer in determining the scope of a simulation timing issue.';
+        lineSeven.textContent = 'Automated deployment of several generations of configuration baseline with Ansible to hardware assets in customer\'s test and verification laboratory and production environments, reducing deployment time by 75%.';
         experienceList.appendChild(lineSeven);
 
         const lineEight = document.createElement('li');
-        lineEight.textContent = 'Develop maintenance tool in Java that generates report of outdated simulation software builds on systems throughout production environment.';
+        lineEight.textContent = 'Implemented Python script that reports statistics of error rates from large datasets, assisting the customer in determining the scope of a simulation timing issue.';
         experienceList.appendChild(lineEight);
 
         const lineNine = document.createElement('li');
-        lineNine.textContent = 'Ensure secure delivery of experiment data to researchers and development team following CIA IT Security industry standard.';
+        lineNine.textContent = 'Developed maintenance tool in Java that generates report of outdated simulation software builds on systems throughout production environment.';
         experienceList.appendChild(lineNine);
+
+        const lineTen = document.createElement('li');
+        lineTen.textContent = 'Ensured secure delivery of experiment data to researchers and development team following CIA IT Security industry standard.';
+        experienceList.appendChild(lineTen);
+
+        const lineEleven = document.createElement('li');
+        lineEleven.textContent = 'Showcased our interactive demonstrator for Urban Air Mobility, a flying taxi concept, at the prestigious Experimental Aircraft Association 2023 AirVenture Air Show in Oshkosh, WI.';
+        experienceList.appendChild(lineEleven);
         professionalExperienceContainer.appendChild(experienceList);
 
         return professionalExperienceContainer;
@@ -520,18 +528,39 @@ export class ResumeTab extends Page {
     }
 
     /**
-     * Renders the skills list section.
+     * Renders the skills section.
      * @returns HTMLDivElement The div element that contains information about 
-     * the skills I have acquired.
+     * skills I possess.
      */
     renderSkillsList() {
-        const skillsList = document.createElement('ul');
-        skillsList.classList.add('skills-list');
+        const skillsLi = document.createElement('li');
+        skillsLi.classList.add('skills-list-item');
+        const skills = document.createElement('strong');
+        skills.classList.add('skill-category');
+        skills.textContent = 'Platforms:';
+        skillsLi.appendChild(skills);
 
-        skillsList.appendChild(this.renderLanguagesAndLibrariesList());
-        skillsList.appendChild(this.renderEnvironmentsAndToolsList());        
-        skillsList.appendChild(this.renderPlatformsList());
+        const skillsList = document.createElement('p');
+        skillsList.textContent = 'Object Oriented Programming (OOP); Responsive Web Design, DevOps, Documentation';
+        skillsLi.appendChild(skillsList);
 
-        return skillsList;
+        return skillsLi;
+    }
+
+    /**
+     * Renders the summary of technical skills list section.
+     * @returns HTMLDivElement The div element that contains information about 
+     * the technical skills I have acquired.
+     */
+    renderTechnicalSkillsSummaryList() {
+        const technicalSkillsList = document.createElement('ul');
+        technicalSkillsList.classList.add('skills-list');
+
+        technicalSkillsList.appendChild(this.renderLanguagesAndLibrariesList());
+        technicalSkillsList.appendChild(this.renderEnvironmentsAndToolsList());  
+        technicalSkillsList.appendChild(this.renderSkillsList());      
+        technicalSkillsList.appendChild(this.renderPlatformsList());
+
+        return technicalSkillsList;
     }
 }
