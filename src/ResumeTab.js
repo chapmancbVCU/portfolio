@@ -449,12 +449,18 @@ export class ResumeTab extends Page {
         const professionalExperienceContainer = document.createElement('div');
         professionalExperienceContainer.classList.add(
                 'professional-experience-container');
-
+ 
+        professionalExperienceContainer.appendChild(this.renderFacilityContainer(
+                'Analytical Mechanics Associates',
+                'Software Developer',
+                'Hampton, VA',
+                '06/2023 - Present'));
+        
         professionalExperienceContainer.appendChild(this.renderFacilityContainer(
                 'Science Systems and Applications, Inc.',
                 'Computer Scientist',
                 'Hampton, VA',
-                '08-2012 - Present'));
+                '08/2012 - 05/2023'));
 
         const experienceList = document.createElement('ul');
         experienceList.classList.add('experience-list');
@@ -468,7 +474,7 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineTwo);
         
         const lineThree = document.createElement('li');
-        lineThree.textContent = '•	Develop website front end for video streaming solution that references database storing searchable records of videos available to VOD service.';
+        lineThree.textContent = 'Develop website front end for video streaming solution that references database storing searchable records of videos available to VOD service.';
         experienceList.appendChild(lineThree);
 
         const lineFour = document.createElement('li');

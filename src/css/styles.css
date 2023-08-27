@@ -116,6 +116,7 @@ body {
 .facility-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5px;
 }
 
 .facility-container-right {
