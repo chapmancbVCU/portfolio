@@ -24,7 +24,7 @@ import { ResumeTab } from './ResumeTab.js';
 const homeTab = new HomeTab();
 const resumeTab = new ResumeTab();
 const projectsTab = new ProjectsTab();
-const aboutTab = new AboutTab();
+//const aboutTab = new AboutTab();
 //const contactTab = new ContactTab();
 
 // Show home tab by default.
@@ -37,7 +37,7 @@ container.appendChild(homeTab.initializeFooter());
 const homeTabSelector = document.querySelector('#home-tab');
 const resumeTabSelector = document.querySelector('#resume-tab');
 const projectsTabSelector = document.querySelector('#projects-tab');
-const aboutTabSelector = document.querySelector('#about-tab');
+//const aboutTabSelector = document.querySelector('#about-tab');
 //const contactTabSelector = document.querySelector('#contact-tab');
 
 /******************************************************************************
