@@ -9,7 +9,7 @@
 /******************************************************************************
  * IMPORTS
  *****************************************************************************/
-// import Oshkosh from "./images/oshkosh_image.png";
+import oshkosh from "./images/oshkosh_astronaut.jpg";
 import { Page } from "./Page.js";
 
 /**
@@ -37,9 +37,9 @@ export class HomeTab extends Page {
         welcome.textContent = "Welcome to my Professional Portfolio";
         mainContainer.appendChild(welcome);
 
-        // const profileImage = new Image(); 
-        // profileImage.src = Oshkosh;
-        // mainContainer.appendChild(profileImage);
+        const profileImage = new Image();
+        profileImage.src = oshkosh;
+        mainContainer.appendChild(profileImage);
 
         mainContainer.appendChild(this.initializeWelcomeContainer());
         return mainContainer;
