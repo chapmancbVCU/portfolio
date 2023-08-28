@@ -200,6 +200,13 @@ body {
     margin: 10px;
 }
 
+.profile-image {
+    display: block;
+    width: 250px;
+    margin: 25px auto;
+    border-radius: 5px;
+}
+
 .project-description {
     margin-top: 10px;
 }

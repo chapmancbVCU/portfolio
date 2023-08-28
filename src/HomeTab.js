@@ -38,6 +38,7 @@ export class HomeTab extends Page {
         mainContainer.appendChild(welcome);
 
         const profileImage = new Image();
+        profileImage.classList.add('profile-image');
         profileImage.src = oshkosh;
         mainContainer.appendChild(profileImage);
 
