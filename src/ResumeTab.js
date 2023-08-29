@@ -584,7 +584,7 @@ export class ResumeTab extends Page {
         skillsLi.classList.add('skills-list-item');
         const skills = document.createElement('strong');
         skills.classList.add('skill-category');
-        skills.textContent = 'Platforms:';
+        skills.textContent = 'Skills:';
         skillsLi.appendChild(skills);
 
         const skillsList = document.createElement('p');
