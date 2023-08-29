@@ -9,6 +9,8 @@
 /******************************************************************************
  * IMPORTS
  *****************************************************************************/
+import FlyerImage1 from "./images/flyer1.jpeg"
+import FlyerImage2 from "./images/flyer2.jpeg"
 import { Page } from "./Page.js";
 
 /**
@@ -54,6 +56,7 @@ export class ResumeTab extends Page {
      */
     initializeCareerHighlightsSection() {
         const highlightsSection = document.createElement('div');
+        highlightsSection.appendChild(this.renderOshkosh());
         highlightsSection.appendChild(this.renderAdminVisit());
         highlightsSection.appendChild(this.renderAssociateAdminAward());
         highlightsSection.appendChild(this.renderFailureDiscovery());
@@ -310,6 +313,13 @@ export class ResumeTab extends Page {
         return githubLinkContainer;
     }
 
+    renderImage(imageFile) {
+        const image = new Image();
+        image.classList.add('highlights-image');
+        image.src = imageFile;
+        return image;
+    }
+
     /**
      * Renders the job title for my resume.
      * @returns HTMLDivElement The div element that contains the job title for 
@@ -405,6 +415,28 @@ export class ResumeTab extends Page {
         name.textContent = 'Chad Chapman';
 
         return name;
+    }
+
+    renderOshkosh() {
+        const oshkoshTripContainer = document.createElement('div');
+        oshkoshTripContainer.classList.add('content-container');
+
+        const oshkoshVisit = document.createElement('h3');
+        oshkoshVisit.textContent = "Experimental Aircraft Association (EAA) 2023 AirVenture Air Show in Oshkosh, WI";
+        oshkoshVisit.classList.add('highlight-title');
+        oshkoshTripContainer.appendChild(oshkoshVisit);
+
+        const descriptionParagraph1 = document.createElement('p');
+        descriptionParagraph1.textContent = 'NASA\'s largest public outreach event of the year is the EAA AirVenture Air Show in Oshkosh, Wisconsin. The Crew Systems and Aviation Operations Branch, under the Research Directorate, confidently presented their Urban Air Mobility (UAM) research capability by sending civil servants and contractors to showcase their technology. The industry term for this innovation is flying taxis, and the team utilized an interactive setup called a UAM Flyer to provide an impressive demonstration, as shown in the accompanying images.'
+        descriptionParagraph1.classList.add('paragraph-content');
+        oshkoshTripContainer.appendChild(descriptionParagraph1);
+
+        const flyerImageContainer = document.createElement('div');
+        flyerImageContainer.classList.add('highlights-images')
+        flyerImageContainer.appendChild(this.renderImage(FlyerImage1));
+        flyerImageContainer.appendChild(this.renderImage(FlyerImage2));
+        oshkoshTripContainer.appendChild(flyerImageContainer);
+        return oshkoshTripContainer;
     }
 
     /**
