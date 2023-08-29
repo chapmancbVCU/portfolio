@@ -374,6 +374,6 @@ body {
     }
 
     .menu-list {
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
