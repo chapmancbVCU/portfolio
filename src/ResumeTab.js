@@ -447,7 +447,10 @@ export class ResumeTab extends Page {
         flyerImageContainer.appendChild(this.renderImage(FlyerImage2));
         oshkoshTripContainer.appendChild(flyerImageContainer);
 
-        
+        const descriptionParagraph2 = document.createElement('p');
+        descriptionParagraph2.textContent = 'The UAM Flyers are an invaluable research tool in determining the necessary steps for making flying taxis a fully viable transportation option for the public. With these flyers, we can confidently identify areas that require improvement and those that have been successful within a simulation environment, while maintaining close collaboration with the FAA.'
+        descriptionParagraph2.classList.add('paragraph-content');
+        oshkoshTripContainer.appendChild(descriptionParagraph2);
         return oshkoshTripContainer;
     }
 
