@@ -549,7 +549,7 @@ export class ResumeTab extends Page {
         experienceList.appendChild(lineNine);
 
         const lineTen = document.createElement('li');
-        lineTen.textContent = 'Ensured secure delivery of experiment data to researchers and development team following CIA IT Security industry standard.';
+        lineTen.textContent = 'Ensured secure delivery of experiment data to researchers and development team following Confidentiality, Integrity, and Availability(CIA) Triad IT Security industry standard.';
         experienceList.appendChild(lineTen);
 
         const lineEleven = document.createElement('li');
