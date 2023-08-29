@@ -157,6 +157,20 @@ body {
     border-radius: 5px;
 }
 
+.highlights-image {
+    width: 250px;
+    border-radius: 5px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.highlights-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .main {
     background-color: burlywood;
     border-left: solid black 1px;
@@ -318,6 +332,11 @@ body {
     .content-container {
         width: 700px;
     } 
+
+    .highlights-images {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
     .menu-list {
         column-gap: 20px;
