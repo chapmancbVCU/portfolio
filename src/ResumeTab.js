@@ -313,6 +313,12 @@ export class ResumeTab extends Page {
         return githubLinkContainer;
     }
 
+    /**
+     * Takes the value from an image import statement and creates an 
+     * HTMLImageElement so that it can be rendered.
+     * @param {Image} imageFile The import of an image.
+     * @returns HTMLImageElement containing image for highlights section.
+     */
     renderImage(imageFile) {
         const image = new Image();
         image.classList.add('highlights-image');
@@ -417,6 +423,10 @@ export class ResumeTab extends Page {
         return name;
     }
 
+    /**
+     * Renders section that describes Oshkosh trip.
+     * @returns HTMLDivElement containing details about Oshkosh trip.
+     */
     renderOshkosh() {
         const oshkoshTripContainer = document.createElement('div');
         oshkoshTripContainer.classList.add('content-container');
@@ -436,6 +446,8 @@ export class ResumeTab extends Page {
         flyerImageContainer.appendChild(this.renderImage(FlyerImage1));
         flyerImageContainer.appendChild(this.renderImage(FlyerImage2));
         oshkoshTripContainer.appendChild(flyerImageContainer);
+
+        
         return oshkoshTripContainer;
     }
 
