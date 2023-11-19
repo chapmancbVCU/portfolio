@@ -9,8 +9,7 @@
 /******************************************************************************
  * IMPORTS
  *****************************************************************************/
-import FlyerImage1 from "./images/flyer1.jpeg"
-import FlyerImage2 from "./images/flyer2.jpeg"
+
 import { Page } from "./Page.js";
 
 /**
@@ -440,12 +439,6 @@ export class ResumeTab extends Page {
         descriptionParagraph1.textContent = 'NASA\'s largest public outreach event of the year is the EAA AirVenture Air Show in Oshkosh, Wisconsin. The Crew Systems and Aviation Operations Branch, under the Research Directorate, confidently presented their Urban Air Mobility (UAM) research capability by sending civil servants and contractors to showcase their technology. The industry term for this innovation is flying taxis, and the team utilized an interactive setup called a UAM Flyer to provide an impressive demonstration, as shown in the accompanying images.'
         descriptionParagraph1.classList.add('paragraph-content');
         oshkoshTripContainer.appendChild(descriptionParagraph1);
-
-        const flyerImageContainer = document.createElement('div');
-        flyerImageContainer.classList.add('highlights-images')
-        flyerImageContainer.appendChild(this.renderImage(FlyerImage1));
-        flyerImageContainer.appendChild(this.renderImage(FlyerImage2));
-        oshkoshTripContainer.appendChild(flyerImageContainer);
 
         const descriptionParagraph2 = document.createElement('p');
         descriptionParagraph2.textContent = 'The UAM Flyers are an invaluable research tool in determining the necessary steps for making flying taxis a fully viable transportation option for the public. With these flyers, we can confidently identify areas that require improvement and those that have been successful within a simulation environment, while maintaining close collaboration with the FAA.'
