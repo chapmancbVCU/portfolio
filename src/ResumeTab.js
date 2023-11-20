@@ -436,7 +436,7 @@ export class ResumeTab extends Page {
         oshkoshTripContainer.appendChild(oshkoshVisit);
 
         const descriptionParagraph1 = document.createElement('p');
-        descriptionParagraph1.textContent = 'NASA\'s largest public outreach event of the year is the EAA AirVenture Air Show in Oshkosh, Wisconsin. The Crew Systems and Aviation Operations Branch, under the Research Directorate, confidently presented their Urban Air Mobility (UAM) research capability by sending civil servants and contractors to showcase their technology. The industry term for this innovation is flying taxis, and the team utilized an interactive setup called a UAM Flyer to provide an impressive demonstration, as shown in the accompanying images.'
+        descriptionParagraph1.textContent = 'NASA\'s largest public outreach event of the year is the EAA AirVenture Air Show in Oshkosh, Wisconsin. The Crew Systems and Aviation Operations Branch, under the Research Directorate, confidently presented their Urban Air Mobility (UAM) research capability by sending civil servants and contractors to showcase their technology. The industry term for this innovation is flying taxis, and the team utilized an interactive setup called a UAM Flyer to provide an impressive demonstration.'
         descriptionParagraph1.classList.add('paragraph-content');
         oshkoshTripContainer.appendChild(descriptionParagraph1);
 
