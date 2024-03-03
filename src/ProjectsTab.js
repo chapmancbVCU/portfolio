@@ -16,6 +16,7 @@ import Collatz from "./images/3x+1.png";
 import CombinationLock from "./images/combination-lock.png";
 import CV from "./images/cv.jpg";
 import LibraryImage from "./images/library-image.jpg";
+import NodeImage from "./images/node.jpg";
 import PortfolioImage from "./images/portfolio.jpg";
 import Recursion from "./images/recursion.jpg";
 import RestaurantImage from "./images/restaurant-image.jpg";
@@ -51,11 +52,29 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.initializeWelcomeContainer());
 
         // Current project
-        let title = 'CV Application';
-        let builtWith = 'ReactJS, JavaScript, TypeScript, Jest, Webpack, HTML, CSS';
-        let description = 'A simple CV Application form that uses ReactJS states and hooks to share data between form inputs and sample output.';
-        let codeLink = `location.href='https://github.com/chapmancbVCU/cv-application/tree/main'`;
-        let liveLink = `location.href='https://chapmancbvcu.github.io/cv-application/'`;
+        let title = 'React Weather App';
+        let builtWith = 'HTML, CSS, TypeScript, Styled Components, Browser Router, and React + Vite';
+        let description = 'A refactored version of my Weather App using React and TypeScript.  New features include the ability to show suggestions in the search field and the use of a Node.js server to protect the API key.  The application connects to the Node.js server with a query.  Then the server performs the fetch request to Open Weather Map.  Once the request is fulfilled the server responds to the original request.';
+        let codeLink = `location.href='https://github.com/chapmancbVCU/react-weather-app'`;
+        let liveLink = `location.href='https://github.com/chapmancbVCU/react-weather-app'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            Weather, codeLink, liveLink));
+            title = 'Weather App';
+
+        builtWith = 'JavaScript, Express, dotenv, and, Node.js';
+        description = 'This Node.js server supports the ability to fulfill fetch request from Open Weather Map.  It\'s purpose is to protect the API key from being exposed to the public.  Once it receives a query it sends a request to Open Weather Map.  After it gets a response the original request is fulfilled.  The server supports free tier, one call, and geocoding type requests.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/weather-api-server'`;
+        liveLink = `location.href='https://github.com/chapmancbVCU/weather-api-server'`;
+        mainContainer.appendChild(this.renderProject(
+            title, builtWith, description, 
+            NodeImage, codeLink, liveLink));
+
+        title = 'CV Application';
+        builtWith = 'ReactJS, JavaScript, TypeScript, Jest, Webpack, HTML, CSS';
+        description = 'A simple CV Application form that uses ReactJS states and hooks to share data between form inputs and sample output.';
+        codeLink = `location.href='https://github.com/chapmancbVCU/cv-application/tree/main'`;
+        liveLink = `location.href='https://chapmancbvcu.github.io/cv-application/'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             CV, codeLink, liveLink));
