@@ -54,9 +54,9 @@ export class ProjectsTab extends Page {
         // Current project
         let title = 'React Weather App';
         let builtWith = 'HTML, CSS, TypeScript, Styled Components, Browser Router, and React + Vite';
-        let description = 'A refactored version of my Weather App using React and TypeScript.  New features include the ability to show suggestions in the search field and the use of a Node.js server to protect the API key.  The application connects to the Node.js server with a query.  Then the server performs the fetch request to Open Weather Map.  Once the request is fulfilled the server responds to the original request.';
+        let description = 'This is my current project and new features are currently being added.  A refactored version of my Weather App using React and TypeScript.  New features include the ability to show suggestions in the search field and the use of a Node.js server to protect the API key.  The application connects to the Node.js server with a query.  Then the server performs the fetch request to Open Weather Map.  Once the request is fulfilled the server responds to the original request.  Features being worked on include favorites, component for weather alerts, and minute forecast for precipitation.';
         let codeLink = `location.href='https://github.com/chapmancbVCU/react-weather-app'`;
-        let liveLink = `location.href='https://github.com/chapmancbVCU/react-weather-app'`;
+        let liveLink = `location.href='http://34.224.29.159:5173/react-weather-app'`;
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             Weather, codeLink, liveLink));
