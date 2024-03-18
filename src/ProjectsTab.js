@@ -60,8 +60,8 @@ export class ProjectsTab extends Page {
         mainContainer.appendChild(this.renderProject(
             title, builtWith, description, 
             Weather, codeLink, liveLink));
-            title = 'Weather App';
-
+            
+        title = 'Weather API Server';
         builtWith = 'JavaScript, Express, dotenv, and, Node.js';
         description = 'This Node.js server supports the ability to fulfill fetch request from Open Weather Map.  It\'s purpose is to protect the API key from being exposed to the public.  Once it receives a query it sends a request to Open Weather Map.  After it gets a response the original request is fulfilled.  The server supports free tier, one call, and geocoding type requests.';
         codeLink = `location.href='https://github.com/chapmancbVCU/weather-api-server'`;
